@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Teletactile.tres" type="DynamicFont" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 143.805, 12.4822 )
+
+[node name="Hello" type="RigidBody2D"]
+gravity_scale = 14.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.256851, -0.613754 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -145.433
+margin_top = -14.9318
+margin_right = 156.567
+margin_bottom = 14.0682
+rect_pivot_offset = Vector2( 146, 14.5 )
+custom_fonts/font = ExtResource( 1 )
+text = "Hello World!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
