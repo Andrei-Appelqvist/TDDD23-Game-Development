@@ -2,7 +2,6 @@
 
 [ext_resource path="res://assets/Teletactile-3zavL.ttf" type="DynamicFontData" id=1]
 
-
 [resource]
 size = 32
 extra_spacing_bottom = -4

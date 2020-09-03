@@ -17,6 +17,51 @@ bounce = 1.0
 [node name="Walls" type="Node2D" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="Walls"]
+margin_left = -774.868
+margin_top = 283.881
+margin_right = 583.129
+margin_bottom = 317.881
+rect_rotation = 31.0
+rect_pivot_offset = Vector2( 679, 17 )
+color = Color( 0.117647, 0.14902, 0.364706, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wall1" type="StaticBody2D" parent="Walls/ColorRect"]
+visible = false
+position = Vector2( 678.454, 16.0904 )
+constant_linear_velocity = Vector2( 10, -10 )
+physics_material_override = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/ColorRect/Wall1"]
+visible = false
+position = Vector2( 0.419983, 0.739437 )
+shape = SubResource( 2 )
+
+[node name="ColorRect3" type="ColorRect" parent="Walls"]
+margin_left = 610.74
+margin_top = 193.269
+margin_right = 1968.74
+margin_bottom = 227.269
+rect_rotation = 139.4
+rect_pivot_offset = Vector2( 679, 17 )
+color = Color( 0.117647, 0.14902, 0.364706, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wall1" type="StaticBody2D" parent="Walls/ColorRect3"]
+visible = false
+position = Vector2( 678.454, 16.0904 )
+physics_material_override = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/ColorRect3/Wall1"]
+visible = false
+position = Vector2( 0.419983, 0.739437 )
+shape = SubResource( 2 )
+
+[node name="ColorRect2" type="ColorRect" parent="Walls"]
 margin_left = -0.996613
 margin_top = 632.505
 margin_right = 1357.0
@@ -27,11 +72,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Wall1" type="StaticBody2D" parent="Walls/ColorRect"]
+[node name="Wall1" type="StaticBody2D" parent="Walls/ColorRect2"]
 position = Vector2( 678.454, 16.0904 )
 physics_material_override = SubResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/ColorRect/Wall1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/ColorRect2/Wall1"]
 position = Vector2( 0.419983, 0.739437 )
 shape = SubResource( 2 )
 
