@@ -1,6 +1,6 @@
 extends KinematicBody2D
 const UP = Vector2(0, -1)
-const GRAVITY = 40
+const GRAVITY = 20
 const MAX_SPEED = 400
 const JUMP_HEIGHT = -900
 const ACCELERATION = 50
@@ -39,7 +39,6 @@ func _physics_process(delta):
         
         motion.y = JUMP_HEIGHT * sin(abs(test))
         motion.x = JUMP_HEIGHT*cos(abs(test))
-        
         
         if friction == true:
             motion.x = lerp(motion.x, 0, 0.2)
