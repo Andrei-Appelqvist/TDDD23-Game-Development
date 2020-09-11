@@ -12,28 +12,28 @@ var motion = Vector2()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+    pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	motion.y += GRAVITY
-	var mouse = get_global_mouse_position()
-	look_at(mouse)
-	if abs(motion.x) > MAX_SPEED:
-		motion.x = MAX_SPEED * (motion.x / abs(motion.x))
-	if abs(motion.y) > MAX_SPEED:
-		motion.y = MAX_SPEED * (motion.y / abs(motion.y))
-	var collision = move_and_collide(motion * delta)
-	if collision:
-	  
-		var normal = collision.normal
-	   
-		var reflect = collision.remainder.bounce(normal)
-		motion = motion.bounce(normal)
-		print(reflect)
-		print(motion)
-		motion.x += BOUNCESPEED * cos(rotation) *5
-		motion.y += BOUNCESPEED * sin(rotation) *2
-		move_and_collide(reflect)
-		
+    motion.y += GRAVITY
+    var mouse = get_global_mouse_position()
+    look_at(mouse)
+    if abs(motion.x) > MAX_SPEED:
+        motion.x = MAX_SPEED * (motion.x / abs(motion.x))
+    if abs(motion.y) > MAX_SPEED:
+        motion.y = MAX_SPEED * (motion.y / abs(motion.y))
+    var collision = move_and_collide(motion * delta)
+    if collision:
+      
+        var normal = collision.normal
+       
+        var reflect = collision.remainder.bounce(normal)
+        motion = motion.bounce(normal)
+        print(reflect)
+        print(motion)
+        motion.x += BOUNCESPEED * cos(rotation) *5
+        motion.y += BOUNCESPEED * sin(rotation) *2
+        move_and_collide(reflect)
+        
