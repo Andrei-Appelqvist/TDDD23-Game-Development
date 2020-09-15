@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="platform-test"
-run/main_scene="res://World.tscn"
+run/main_scene="res://floppy/try3.tscn"
 config/icon="res://icon.png"
 
 [display]
