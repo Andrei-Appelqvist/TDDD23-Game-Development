@@ -49,6 +49,7 @@ func _physics_process(delta):
             $Sprite.play("Fall")
         if friction == true:
             motion.x = lerp(motion.x, 0, 0.05)		
+            
     motion = move_and_slide(motion, UP)
     pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
