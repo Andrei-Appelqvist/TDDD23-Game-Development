@@ -25,8 +25,19 @@ func _process(delta):
         var reflect = collision.remainder.bounce(normal)
         motion = motion.bounce(normal)
 
-        if(bottomFirst):
+        if bottomFirst:
             motion.x += BOUNCESPEED * cos(rotation) * 20
             motion.y += BOUNCESPEED * sin(rotation)
 
         move_and_collide(reflect)
+
+
+func _on_Area2D_body_entered(body):
+    if not body is RigidBody2D:
+        bottomFirst = true
+
+
+
+func _on_Area2D_body_exited(body):
+     if not body is RigidBody2D:
+        bottomFirst = false

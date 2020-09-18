@@ -6,72 +6,98 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="end" parent="." instance=ExtResource( 2 )]
-rotation = 3.14159
+
+[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="end"]
+rotation = -1.5708
+node_a = NodePath("..")
+node_b = NodePath("../Node2D")
+bias = 0.595
+length = 660.0
+rest_length = 600.0
+stiffness = 8.9
+damping = 1.29
 
 [node name="Camera2D" type="Camera2D" parent="end"]
+offset = Vector2( 150, 0 )
 current = true
 
-[node name="PinJoint2D8" type="PinJoint2D" parent="end"]
-position = Vector2( -30, 0 )
-node_a = NodePath("../Node2D8")
-node_b = NodePath("..")
-
-[node name="Node2D8" parent="end" instance=ExtResource( 1 )]
-position = Vector2( -60, 0 )
-collision_mask = 1
-
-[node name="PinJoint2D7" type="PinJoint2D" parent="end"]
-position = Vector2( -90, 0 )
-node_a = NodePath("../Node2D7")
-node_b = NodePath("../Node2D8")
-
-[node name="Node2D7" parent="end" instance=ExtResource( 1 )]
-position = Vector2( -120, 0 )
-
-[node name="PinJoint2D6" type="PinJoint2D" parent="end"]
-position = Vector2( -150, 0 )
-node_a = NodePath("../Node2D6")
-node_b = NodePath("../Node2D7")
-
-[node name="Node2D6" parent="end" instance=ExtResource( 1 )]
-position = Vector2( -180, 0 )
-
-[node name="PinJoint2D5" type="PinJoint2D" parent="end"]
-position = Vector2( -210, 0 )
-node_a = NodePath("../Node2D5")
-node_b = NodePath("../Node2D6")
-
-[node name="Node2D5" parent="end" instance=ExtResource( 1 )]
-position = Vector2( -240, 0 )
-
-[node name="PinJoint2D4" type="PinJoint2D" parent="end"]
-position = Vector2( -270, 0 )
-node_a = NodePath("../Node2D4")
-node_b = NodePath("../Node2D5")
-
-[node name="Node2D4" parent="end" instance=ExtResource( 1 )]
-position = Vector2( -300, 0 )
-
-[node name="PinJoint2D3" type="PinJoint2D" parent="end"]
-position = Vector2( -330, 0 )
-node_a = NodePath("../Node2D3")
-node_b = NodePath("../Node2D4")
-
-[node name="Node2D3" parent="end" instance=ExtResource( 1 )]
-position = Vector2( -360, 0 )
-
-[node name="PinJoint2D2" type="PinJoint2D" parent="end"]
-position = Vector2( -390, 0 )
-node_a = NodePath("../Node2D2")
-node_b = NodePath("../Node2D3")
-
-[node name="Node2D2" parent="end" instance=ExtResource( 1 )]
-position = Vector2( -420, 0 )
+[node name="Node2D" parent="end" instance=ExtResource( 1 )]
+position = Vector2( 590, -3.11508e-05 )
+rotation = -3.14159
 
 [node name="PinJoint2D" type="PinJoint2D" parent="end"]
-position = Vector2( -450, 0 )
+show_behind_parent = true
+position = Vector2( 570, -2.98793e-05 )
+rotation = -3.14159
 node_a = NodePath("../Node2D")
 node_b = NodePath("../Node2D2")
 
-[node name="Node2D" parent="end" instance=ExtResource( 1 )]
-position = Vector2( -480, 0 )
+[node name="Node2D2" parent="end" instance=ExtResource( 1 )]
+position = Vector2( 520, -2.67007e-05 )
+rotation = -3.14159
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="end"]
+position = Vector2( 500, -2.54292e-05 )
+rotation = -3.14159
+node_a = NodePath("../Node2D2")
+node_b = NodePath("../Node2D3")
+
+[node name="Node2D3" parent="end" instance=ExtResource( 1 )]
+position = Vector2( 450, -2.22506e-05 )
+rotation = -3.14159
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="end"]
+position = Vector2( 430, -2.09791e-05 )
+rotation = -3.14159
+node_a = NodePath("../Node2D3")
+node_b = NodePath("../Node2D4")
+
+[node name="Node2D4" parent="end" instance=ExtResource( 1 )]
+position = Vector2( 380, -1.78004e-05 )
+rotation = -3.14159
+
+[node name="PinJoint2D4" type="PinJoint2D" parent="end"]
+position = Vector2( 360, -1.6529e-05 )
+rotation = -3.14159
+node_a = NodePath("../Node2D4")
+node_b = NodePath("../Node2D5")
+
+[node name="Node2D5" parent="end" instance=ExtResource( 1 )]
+position = Vector2( 310, -1.33503e-05 )
+rotation = -3.14159
+
+[node name="PinJoint2D5" type="PinJoint2D" parent="end"]
+position = Vector2( 290, -1.20789e-05 )
+rotation = -3.14159
+node_a = NodePath("../Node2D5")
+node_b = NodePath("../Node2D6")
+
+[node name="Node2D6" parent="end" instance=ExtResource( 1 )]
+position = Vector2( 240, -8.90022e-06 )
+rotation = -3.14159
+
+[node name="PinJoint2D6" type="PinJoint2D" parent="end"]
+position = Vector2( 220, -7.62876e-06 )
+rotation = -3.14159
+node_a = NodePath("../Node2D6")
+node_b = NodePath("../Node2D7")
+
+[node name="Node2D7" parent="end" instance=ExtResource( 1 )]
+position = Vector2( 170, -4.45011e-06 )
+rotation = -3.14159
+
+[node name="PinJoint2D7" type="PinJoint2D" parent="end"]
+position = Vector2( 150, -3.17865e-06 )
+rotation = -3.14159
+node_a = NodePath("../Node2D7")
+node_b = NodePath("../Node2D8")
+
+[node name="Node2D8" parent="end" instance=ExtResource( 1 )]
+position = Vector2( 100, 0 )
+rotation = 3.14159
+
+[node name="PinJoint2D8" type="PinJoint2D" parent="end"]
+position = Vector2( 80, 0 )
+rotation = -3.14159
+node_a = NodePath("../Node2D8")
+node_b = NodePath("..")
