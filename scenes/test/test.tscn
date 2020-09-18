@@ -8,11 +8,14 @@ radius = 49.6882
 height = 41.6141
 
 [node name="seg" type="RigidBody2D"]
-mass = 0.102041
+rotation = 3.14159
+mass = 10.2041
+angular_damp = 8.0
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 500, 100 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
