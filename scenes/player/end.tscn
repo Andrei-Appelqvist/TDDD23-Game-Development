@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/purpleworm1.0.png" type="Texture" id=1]
+[ext_resource path="res://scenes/player/end.gd" type="Script" id=2]
+
+[node name="Node2D" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 39.8384, 0 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -18.9507, -48.9194, 64.1431, -48.7525, 80.328, -43.2463, 95.1781, -25.3928, 97.6809, -13.0456, 98.1815, 9.31301, 94.8444, 23.3288, 82.4971, 39.6806, 58.9005, 48.5106, -18.6838, 48.709, -34.1609, 44.5421, -48.2491, 34.2239, -58.5672, 9.02395, -58.1704, -14.3902, -46.0664, -38.7965, -31.7798, -46.9319 )
