@@ -70,13 +70,13 @@ position = Vector2( -40, 0 )
 current = true
 
 [node name="GrooveBack" type="GrooveJoint2D" parent="control"]
-position = Vector2( 230, 0 )
+position = Vector2( 220, 0 )
 rotation = -1.5708
 node_a = NodePath("..")
 node_b = NodePath("../PinJoint2D/PinJoint2D3/PinJoint2D4/Node2D3")
 bias = 0.5
-length = 25.0
-initial_offset = 20.0
+length = 30.0
+initial_offset = 30.0
 
 [node name="GrooveFront" type="GrooveJoint2D" parent="control"]
 position = Vector2( -230, 0 )
