@@ -68,6 +68,7 @@ position = Vector2( -40, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="control"]
 current = true
+zoom = Vector2( 4, 4 )
 
 [node name="GrooveBack" type="GrooveJoint2D" parent="control"]
 position = Vector2( 220, 0 )
