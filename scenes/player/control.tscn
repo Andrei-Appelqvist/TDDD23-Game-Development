@@ -1,23 +1,22 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/purpleworm2.0.png" type="Texture" id=1]
-[ext_resource path="res://scenes/test/test.gd" type="Script" id=2]
+[ext_resource path="res://scenes/player/control.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 49.6882
 height = 41.6141
 
-[node name="seg" type="RigidBody2D"]
-rotation = 3.14159
+[node name="control" type="RigidBody2D"]
 mass = 10.2041
-angular_damp = 8.0
+can_sleep = false
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+rotation = 3.14159
+scale = Vector2( 1, 1.07 )
 texture = ExtResource( 1 )
-region_rect = Rect2( 0, 0, 500, 100 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 rotation = 1.5708
 shape = SubResource( 1 )
