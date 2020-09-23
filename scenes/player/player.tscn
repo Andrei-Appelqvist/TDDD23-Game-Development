@@ -96,10 +96,10 @@ length = 15.0
 initial_offset = 15.0
 
 [node name="GrooveFront" type="GrooveJoint2D" parent="control"]
-position = Vector2( -268, 0 )
+position = Vector2( -267, 0 )
 rotation = 1.5708
 node_a = NodePath("..")
 node_b = NodePath("../head")
 bias = 0.5
-length = 4.0
-initial_offset = 2.0
+length = 6.0
+initial_offset = 3.0
