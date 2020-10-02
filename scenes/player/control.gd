@@ -14,6 +14,6 @@ func _integrate_forces(state):
         var negation = 1
         if desired_rotation < 0:
             negation = -1
-        desired_rotation = 10 * negation
+        desired_rotation = 8 * negation
     state.angular_velocity = desired_rotation
     desired_rotation = 0

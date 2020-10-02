@@ -8,9 +8,10 @@
 
 [node name="control" parent="." instance=ExtResource( 1 )]
 rotation = 3.14159
-mass = 51.0204
-gravity_scale = 9.0
+mass = 50.0
+gravity_scale = 5.0
 linear_damp = 0.0
+angular_damp = 0.0
 
 [node name="PinJoint2D" type="PinJoint2D" parent="control"]
 show_behind_parent = true
@@ -40,17 +41,6 @@ node_b = NodePath("Node2D3")
 show_behind_parent = true
 position = Vector2( 40, 0 )
 
-[node name="PinJoint2D" type="PinJoint2D" parent="control/PinJoint2D/PinJoint2D3/PinJoint2D4/Node2D3"]
-position = Vector2( -40, 0 )
-node_a = NodePath("..")
-node_b = NodePath("seg")
-
-[node name="seg" parent="control/PinJoint2D/PinJoint2D3/PinJoint2D4/Node2D3/PinJoint2D" instance=ExtResource( 2 )]
-show_behind_parent = true
-position = Vector2( -40, 0 )
-rotation = 0.0
-z_index = -1
-
 [node name="PinJoint2D2" type="PinJoint2D" parent="control"]
 position = Vector2( -40, 0 )
 node_a = NodePath("..")
@@ -58,6 +48,7 @@ node_b = NodePath("Node2D2")
 
 [node name="Node2D2" parent="control/PinJoint2D2" instance=ExtResource( 2 )]
 position = Vector2( -40, 0 )
+script = null
 
 [node name="PinJoint2D" type="PinJoint2D" parent="control/PinJoint2D2"]
 position = Vector2( -80, 0 )
@@ -66,34 +57,30 @@ node_b = NodePath("Node2D2")
 
 [node name="Node2D2" parent="control/PinJoint2D2/PinJoint2D" instance=ExtResource( 2 )]
 position = Vector2( -40, 0 )
+script = null
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="control/PinJoint2D2/PinJoint2D"]
-visible = false
 position = Vector2( -80, 0 )
 node_a = NodePath("../Node2D2")
 node_b = NodePath("../../../head")
 
-[node name="Node2D3" parent="control/PinJoint2D2/PinJoint2D/PinJoint2D2" instance=ExtResource( 2 )]
-position = Vector2( -40, 0 )
-
-[node name="PinJoint2D" type="PinJoint2D" parent="control/PinJoint2D2/PinJoint2D/PinJoint2D2/Node2D3"]
-position = Vector2( 30, 0 )
-
 [node name="head" parent="control" instance=ExtResource( 3 )]
 position = Vector2( -270, 12 )
+mass = 8.0
+script = null
 
 [node name="Camera2D" type="Camera2D" parent="control"]
 current = true
 zoom = Vector2( 3, 3 )
 
 [node name="GrooveBack" type="GrooveJoint2D" parent="control"]
-position = Vector2( 315, 0 )
+position = Vector2( 230, 0 )
 rotation = -1.5708
 node_a = NodePath("..")
-node_b = NodePath("../PinJoint2D/PinJoint2D3/PinJoint2D4/Node2D3/PinJoint2D/seg")
+node_b = NodePath("../PinJoint2D/PinJoint2D3/PinJoint2D4/Node2D3")
 bias = 0.5
-length = 15.0
-initial_offset = 15.0
+length = 40.0
+initial_offset = 20.0
 
 [node name="GrooveFront" type="GrooveJoint2D" parent="control"]
 position = Vector2( -267, 0 )
