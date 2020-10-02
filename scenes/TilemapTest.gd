@@ -20,3 +20,15 @@ func _input(event):
 		get_tree().quit()
 	if event.is_action_pressed("ui_up"):
 		get_tree().reload_current_scene()
+
+
+func _on_Platformdespawner_body_entered(body):
+	if(get_tree().get_root().get_node('Node2D/Platform')):
+		get_tree().get_root().get_node('Node2D/Platform').free()
+	pass # Replace with function body.
+
+
+func _on_Fallholderdespawner_body_entered(body):
+	if(get_tree().get_root().get_node('Node2D/Fall-holder')):
+		get_tree().get_root().get_node('Node2D/Fall-holder').free()
+	pass # Replace with function body.
