@@ -42,6 +42,8 @@ jump={
 
 common/physics_fps=144
 2d/thread_model=2
+2d/default_gravity=150
+2d/default_linear_damp=0.5
 
 [rendering]
 
