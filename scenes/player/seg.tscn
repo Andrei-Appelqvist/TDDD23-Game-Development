@@ -5,6 +5,8 @@
 
 [sub_resource type="PhysicsMaterial" id=1]
 rough = true
+bounce = 0.2
+absorbent = true
 
 [node name="seg" type="RigidBody2D"]
 rotation = 3.14159
