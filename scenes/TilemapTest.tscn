@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/TilemapTest.gd" type="Script" id=2]
 [ext_resource path="res://assets/Assets 1024 Cave/fall-removebg-preview.png" type="Texture" id=3]
-[ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://res/light.png" type="Texture" id=5]
 [ext_resource path="res://res/wall-wallpaper-concrete-colored-painted-textured-concept_53876-31799.jpg" type="Texture" id=6]
 
@@ -96,9 +95,6 @@ flip_h = true
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2886.75, -1605.05 )
 
 [node name="Blackbox" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
