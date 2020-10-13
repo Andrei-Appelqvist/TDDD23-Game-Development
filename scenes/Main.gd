@@ -16,7 +16,7 @@ func _input(event):
         save_game()
     elif event.is_action_pressed("ui_cancel"):
         save_game()
-        get_tree().change_scene("res://scenes/Menu.tscn")
+        get_tree().change_scene("res://scenes/färdiga_scener/Menu.tscn")
           
 func _notification(what):
     if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
