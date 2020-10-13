@@ -10,6 +10,7 @@ func _input(event):
         
 
 func _integrate_forces(state):
+    get_parent().velocity = state.get_linear_velocity()
     if abs(desired_rotation) > 10:
         var negation = 1
         if desired_rotation < 0:

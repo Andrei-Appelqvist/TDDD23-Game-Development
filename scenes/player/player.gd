@@ -1,16 +1,18 @@
 extends Node2D
 
+var velocity = Vector2()
+func set_start_speed(velocity):
+    $control.apply_impulse(Vector2(),velocity)
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-    pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#    pass
+func save():
+    var save_dict = {
+        "filename" : get_filename(),
+        "parent" : get_parent().get_path(),
+        "pos_x" : $control.global_position.x,
+        "pos_y" : $control.global_position.y,
+        "rotation": $control.global_rotation_degrees,
+        "force_x": velocity.x,
+        "force_y": velocity.y,
+    }
+    print(save_dict)
+    return save_dict
