@@ -8,11 +8,11 @@
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 4367.96, -4981.97 )
-
 [node name="TutorialArea" parent="." instance=ExtResource( 1 )]
-position = Vector2( 4739.87, -5601.67 )
+position = Vector2( 371.496, -619.442 )
 
 [node name="RockBottom" parent="." instance=ExtResource( 4 )]
-position = Vector2( 10423.2, 2907.27 )
+position = Vector2( 6054.83, 7889.5 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+gravity_scale = 1.0
