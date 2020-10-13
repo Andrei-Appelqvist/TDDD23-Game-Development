@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/worm-front.png" type="Texture" id=1]
 [ext_resource path="res://assets/worm.png" type="Texture" id=2]
 [ext_resource path="res://assets/worm-back.png" type="Texture" id=3]
 [ext_resource path="res://assets/purplehead.png" type="Texture" id=4]
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=5]
+[ext_resource path="res://scripts/AcceptDialog.gd" type="Script" id=6]
 
 [node name="Menu" type="MarginContainer"]
 anchor_right = 1.0
@@ -70,4 +71,17 @@ margin_top = 231.0
 margin_right = 314.0
 margin_bottom = 328.0
 texture = ExtResource( 4 )
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+margin_left = 200.0
+margin_top = 200.0
+margin_right = 200.0
+margin_bottom = 200.0
+popup_exclusive = true
+dialog_text = "Starting a new game will overwrite your current save. Continue?"
+script = ExtResource( 6 )
 [connection signal="gui_input" from="HBoxContainer/VBoxContainer/Continue" to="." method="_on_Continue_gui_signal"]
+[connection signal="gui_input" from="HBoxContainer/VBoxContainer/NewGame" to="." method="NewGame_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/VBoxContainer/Credits" to="." method="Credits_gui_input"]
+[connection signal="gui_input" from="HBoxContainer/VBoxContainer/Quit" to="." method="Quit_gui_input"]
+[connection signal="confirmed" from="AcceptDialog" to="." method="AcceptDialog_confirmed"]

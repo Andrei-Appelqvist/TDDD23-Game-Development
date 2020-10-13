@@ -15,6 +15,7 @@ func _input(event):
     elif event.is_action_pressed("ui_up"):
         save_game()
     elif event.is_action_pressed("ui_cancel"):
+        save_game()
         get_tree().change_scene("res://scenes/Menu.tscn")
           
 func _notification(what):
@@ -68,8 +69,8 @@ func load_game():
         player = load(node_data["filename"]).instance()
         get_node(node_data["parent"]).add_child(player)
         player.position = Vector2(node_data["pos_x"], node_data["pos_y"])
-        player.rotation_degrees = node_data["rotation"]
-        #player.control.apply_impulse(Vector2(),Vector2(node_data["force_x"], node_data["force_y"]))
+        player.rotation_degrees = node_data["rotation"] + 180
+        player.set_start_speed(Vector2(node_data["force_x"], node_data["force_y"]))
         
         # Now we set the remaining variables.
         """

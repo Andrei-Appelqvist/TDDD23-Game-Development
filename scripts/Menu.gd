@@ -13,3 +13,26 @@ func _on_Continue_gui_signal(event):
     if event.is_action_pressed("jump") and save_exists:
         get_node("HBoxContainer/VBoxContainer/Continue").add_color_override("Red", Color.red)
         get_tree().change_scene("res://scenes/Main.tscn")
+
+
+func NewGame_gui_input(event):
+    if event.is_action_pressed("jump"):
+        if save_exists:
+            $AcceptDialog.show()
+        else:
+            get_tree().change_scene("res://scenes/Main.tscn")
+    pass # Replace with function body.
+
+
+func Quit_gui_input(event):
+    pass # Replace with function body.
+
+
+func Credits_gui_input(event):
+    pass # Replace with function body.
+
+
+func AcceptDialog_confirmed():
+    var save_dir = Directory.new()
+    save_dir.remove("user://savegame.save")
+    get_tree().change_scene("res://scenes/Main.tscn")
