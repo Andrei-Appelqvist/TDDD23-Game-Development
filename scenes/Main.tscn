@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/färdiga_scener/TilemapTest.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/färdiga_scener/TheFall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Main.gd" type="Script" id=3]
 [ext_resource path="res://scenes/färdiga_scener/RockBottom.tscn" type="PackedScene" id=4]
@@ -10,13 +10,13 @@
 script = ExtResource( 3 )
 
 [node name="RockBottom" parent="." instance=ExtResource( 4 )]
-position = Vector2( 6054.83, 7889.5 )
+position = Vector2( 10050.6, 13141 )
 
 [node name="Node2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 373.58, -557.674 )
 
 [node name="Node2D2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 12198.1, 4906.92 )
+position = Vector2( 26620.8, 2661.7 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -17.8418, 15.2373 )

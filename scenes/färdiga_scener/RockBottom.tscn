@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/Assets 1024 Cave/Cave - RockCombinations1.png" type="Texture" id=1]
 [ext_resource path="res://assets/Assets 1024 Cave/Cave - BigRocks1.png" type="Texture" id=2]
-[ext_resource path="res://scenes/TilemapTest.gd" type="Script" id=4]
+[ext_resource path="res://scripts/TheFall.gd" type="Script" id=4]
 [ext_resource path="res://scenes/player/Tiles.tres" type="TileSet" id=5]
 [ext_resource path="res://res/wall-wallpaper-concrete-colored-painted-textured-concept_53876-31799.jpg" type="Texture" id=6]
 [ext_resource path="res://assets/Assets 1024 Cave/Cave - Floor.png" type="Texture" id=7]
@@ -10,6 +10,8 @@
 [ext_resource path="res://assets/Assets 1024 Cave/Cave - SmallRocks.png" type="Texture" id=9]
 [ext_resource path="res://assets/Assets 1024 Cave/Square - Black.jpg" type="Texture" id=10]
 [ext_resource path="res://assets/welcome sign.png" type="Texture" id=11]
+
+
 
 
 

@@ -25,7 +25,8 @@ func NewGame_gui_input(event):
 
 
 func Quit_gui_input(event):
-    pass # Replace with function body.
+    if event.is_action_pressed("jump"):
+        get_tree().quit()
 
 
 func Credits_gui_input(event):
