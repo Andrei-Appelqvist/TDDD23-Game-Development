@@ -17,7 +17,7 @@ func _input(event):
     elif event.is_action_pressed("ui_cancel"):
         save_game()
         get_tree().change_scene("res://scenes/färdiga_scener/Menu.tscn")
-          
+
 func _notification(what):
     if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
         save_game()
@@ -48,12 +48,12 @@ func save_game():
         save_game.store_line(to_json(node_data))
     save_game.close()
     print("saving done")
-    
+
 func load_game():
     var save_game = File.new()
     if not save_game.file_exists("user://savegame.save"):
         return
-        
+
     var save_nodes = get_tree().get_nodes_in_group("Persist")
     for i in save_nodes:
         i.queue_free()
@@ -71,7 +71,7 @@ func load_game():
         player.position = Vector2(node_data["pos_x"], node_data["pos_y"])
         player.rotation_degrees = node_data["rotation"] + 180
         player.set_start_speed(Vector2(node_data["force_x"], node_data["force_y"]))
-        
+
         # Now we set the remaining variables.
         """
         for i in node_data.keys():
@@ -80,4 +80,3 @@ func load_game():
             new_object.set(i, node_data[i])
         """
     save_game.close()
-

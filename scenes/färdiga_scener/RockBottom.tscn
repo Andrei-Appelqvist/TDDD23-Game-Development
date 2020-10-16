@@ -2,9 +2,9 @@
 
 [ext_resource path="res://assets/Assets 1024 Cave/Cave - RockCombinations1.png" type="Texture" id=1]
 [ext_resource path="res://assets/Assets 1024 Cave/Cave - BigRocks1.png" type="Texture" id=2]
+[ext_resource path="res://assets/Backgrounds/rocks.png" type="Texture" id=3]
 [ext_resource path="res://scripts/TheFall.gd" type="Script" id=4]
 [ext_resource path="res://scenes/player/Tiles.tres" type="TileSet" id=5]
-[ext_resource path="res://res/wall-wallpaper-concrete-colored-painted-textured-concept_53876-31799.jpg" type="Texture" id=6]
 [ext_resource path="res://assets/Assets 1024 Cave/Cave - Floor.png" type="Texture" id=7]
 [ext_resource path="res://assets/Assets 1024 Cave/Cave - Platforms.png" type="Texture" id=8]
 [ext_resource path="res://assets/Assets 1024 Cave/Cave - SmallRocks.png" type="Texture" id=9]
@@ -353,10 +353,16 @@ points = PoolVector2Array( 2, 569.333, 16, 496.333, 16, 481.333, 23, 469.333, 41
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 4 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 404.938, -119.55 )
-scale = Vector2( 12.628, 7.60892 )
-texture = ExtResource( 6 )
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -3229.0
+margin_top = -3043.0
+margin_right = 8431.0
+margin_bottom = 2082.0
+texture = ExtResource( 3 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="black tiles" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
