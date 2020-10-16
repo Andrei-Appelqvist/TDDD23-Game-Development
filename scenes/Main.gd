@@ -6,17 +6,17 @@ func _ready():
 	load_game()
 
 func _input(event):
-    if event.is_action_pressed("ui_down"):
-        get_tree().quit()
-    elif event.is_action_pressed("ui_left"):
-        player.queue_free()
-        player = load("res://scenes/player/player.tscn").instance()
-        add_child(player)
-    elif event.is_action_pressed("ui_up"):
-        save_game()
-    elif event.is_action_pressed("ui_cancel"):
-        save_game()
-        get_tree().change_scene("res://scenes/färdiga_scener/Menu.tscn")
+	if event.is_action_pressed("ui_down"):
+		get_tree().quit()
+	elif event.is_action_pressed("ui_left"):
+		player.queue_free()
+		player = load("res://scenes/player/player.tscn").instance()
+		add_child(player)
+	elif event.is_action_pressed("ui_up"):
+		save_game()
+	elif event.is_action_pressed("ui_cancel"):
+		save_game()
+		get_tree().change_scene("res://scenes/färdiga_scener/Menu.tscn")
 
 func _notification(what):
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
@@ -65,18 +65,18 @@ func load_game():
 		# Get the saved dictionary from the next line in the save file
 		var node_data = parse_json(save_game.get_line())
 
-        # Firstly, we need to create the object and add it to the tree and set its position.
-        player = load(node_data["filename"]).instance()
-        get_node(node_data["parent"]).add_child(player)
-        player.position = Vector2(node_data["pos_x"], node_data["pos_y"])
-        player.rotation_degrees = node_data["rotation"] + 180
-        player.set_start_speed(Vector2(node_data["force_x"], node_data["force_y"]))
+		# Firstly, we need to create the object and add it to the tree and set its position.
+		player = load(node_data["filename"]).instance()
+		get_node(node_data["parent"]).add_child(player)
+		player.position = Vector2(node_data["pos_x"], node_data["pos_y"])
+		player.rotation_degrees = node_data["rotation"] + 180
+		player.set_start_speed(Vector2(node_data["force_x"], node_data["force_y"]))
 
-        # Now we set the remaining variables.
-        """
-        for i in node_data.keys():
-            if i == "filename" or i == "parent" or i == "pos_x" or i == "pos_y" or i == "rotation":
-                continue
-            new_object.set(i, node_data[i])
-        """
-    save_game.close()
+		# Now we set the remaining variables.
+		"""
+		for i in node_data.keys():
+			if i == "filename" or i == "parent" or i == "pos_x" or i == "pos_y" or i == "rotation":
+				continue
+			new_object.set(i, node_data[i])
+		"""
+	save_game.close()
