@@ -15,4 +15,4 @@ position = Vector2( 371.496, -619.442 )
 position = Vector2( 6054.83, 7889.5 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-gravity_scale = 1.0
+position = Vector2( 3142.89, -2442.48 )

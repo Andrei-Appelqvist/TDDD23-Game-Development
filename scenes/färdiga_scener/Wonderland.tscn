@@ -117,7 +117,7 @@ __meta__ = {
 }
 
 [node name="player" parent="." instance=ExtResource( 29 )]
-position = Vector2( 29.2026, -4458.68 )
+position = Vector2( 70.8369, -4328.73 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 0, -1 )
@@ -164,7 +164,7 @@ scale = Vector2( 0.395179, 0.416112 )
 z_index = 8
 frames = SubResource( 1 )
 animation = "Eyes"
-frame = 81
+frame = 291
 speed_scale = 2.5
 playing = true
 
