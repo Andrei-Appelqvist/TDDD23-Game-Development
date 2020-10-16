@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/färdiga_scener/TheFall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Main.gd" type="Script" id=3]
 [ext_resource path="res://scenes/färdiga_scener/RockBottom.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/färdiga_scener/Wonderland.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/hell.tscn" type="PackedScene" id=7]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
@@ -22,8 +23,13 @@ __meta__ = {
 [node name="TheFall" parent="." instance=ExtResource( 1 )]
 position = Vector2( 373.58, -557.674 )
 
-[node name="RockBottom" parent="." instance=ExtResource( 4 )]
-position = Vector2( 10050.6, 13141 )
+[node name="Node2D" type="Node2D" parent="TheFall"]
+position = Vector2( 9144.7, 13773.9 )
+
+[node name="Hell" parent="TheFall/Node2D" instance=ExtResource( 7 )]
+position = Vector2( 6033.01, -4019.76 )
+
+[node name="RockBottom" parent="TheFall/Node2D" instance=ExtResource( 4 )]
 
 [node name="Wonderland" parent="." instance=ExtResource( 5 )]
 position = Vector2( 26620.8, 2661.7 )
