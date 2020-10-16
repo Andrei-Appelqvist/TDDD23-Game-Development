@@ -7,7 +7,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Hell" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6025.01, -3805.76 )
+position = Vector2( 6033.01, -4019.76 )
 
 [node name="RockBottom" parent="." instance=ExtResource( 1 )]
 
