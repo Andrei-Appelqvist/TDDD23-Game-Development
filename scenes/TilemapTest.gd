@@ -30,3 +30,18 @@ func _on_Fallholderdespawner_body_entered(body):
 	if(get_tree().get_root().get_node('Node2D/Fall-holder')):
 		get_tree().get_root().get_node('Node2D/Fall-holder').free()
 	pass # Replace with function body.
+
+
+func _on_Area2D_body_entered(body):
+	print(body)
+	if get_node("player/control").frozen == false:
+		get_node("player/control").frozen = true
+		get_node("Birb/AnimationPlayer").play("birb")
+	pass # Replace with function body.
+
+
+func _on_Birb_body_entered(body):
+	get_node("player").follow_birb = true
+	get_node("END-CAMERA").current = true
+	print("Fuck yeah!")
+	pass # Replace with function body.

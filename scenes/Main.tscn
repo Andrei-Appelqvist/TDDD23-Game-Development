@@ -19,14 +19,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RockBottom" parent="." instance=ExtResource( 4 )]
-position = Vector2( 10050.6, 13141 )
-
 [node name="TheFall" parent="." instance=ExtResource( 1 )]
 position = Vector2( 373.58, -557.674 )
+
+[node name="RockBottom" parent="." instance=ExtResource( 4 )]
+position = Vector2( 10050.6, 13141 )
 
 [node name="Wonderland" parent="." instance=ExtResource( 5 )]
 position = Vector2( 26620.8, 2661.7 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -17.8418, 15.2373 )
+position = Vector2( 2895.56, -2407.65 )

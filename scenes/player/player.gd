@@ -1,6 +1,8 @@
 extends Node2D
 
 var velocity = Vector2()
+var follow_birb = false
+var camera_done = false
 func set_start_speed(velocity):
 	$control.apply_impulse(Vector2(),velocity)
 
@@ -16,3 +18,10 @@ func save():
 	}
 	print(save_dict)
 	return save_dict
+
+func _process(delta):
+	if follow_birb == true:
+		if camera_done == false:
+			get_parent().get_node("END-CAMERA").position = $control/Camera2D.global_position
+			camera_done = true
+		position = get_parent().get_node("Birb").position + Vector2(-200, -5)
