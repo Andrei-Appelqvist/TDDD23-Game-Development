@@ -21,8 +21,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Node2D2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 17083, -4737.65 )
+[node name="END" parent="." instance=ExtResource( 6 )]
+position = Vector2( 22614.4, -7844.26 )
 
 [node name="Wonderland" parent="." instance=ExtResource( 5 )]
 position = Vector2( 15098.6, 3615.78 )
