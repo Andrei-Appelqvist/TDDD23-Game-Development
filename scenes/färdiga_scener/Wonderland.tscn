@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://assets/Custom_tiles/Eyes/do-bright (5).png" type="Texture" id=1]
 [ext_resource path="res://assets/Custom_tiles/Eyes/do-bright (3).png" type="Texture" id=2]
@@ -12,7 +12,7 @@
 [ext_resource path="res://assets/Custom_tiles/Eyes/do-bright (18).png" type="Texture" id=10]
 [ext_resource path="res://assets/Custom_tiles/Eyes/do-bright (11).png" type="Texture" id=11]
 [ext_resource path="res://assets/Custom_tiles/Eyes/do-bright (16).png" type="Texture" id=12]
-[ext_resource path="res://assets/Backgrounds/dirt.png" type="Texture" id=13]
+[ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/Custom_tiles/Eyes/do-bright (10).png" type="Texture" id=14]
 [ext_resource path="res://assets/Custom_tiles/Eyes/do-bright.png" type="Texture" id=15]
 [ext_resource path="res://assets/Custom_tiles/Eyes/do-bright (12).png" type="Texture" id=16]
@@ -28,13 +28,15 @@
 [ext_resource path="res://assets/Custom_tiles/Eyes/do-bright (8).png" type="Texture" id=26]
 [ext_resource path="res://assets/Custom_tiles/Eyes/do-bright (7).png" type="Texture" id=27]
 [ext_resource path="res://scripts/TheFall.gd" type="Script" id=28]
+[ext_resource path="res://assets/Backgrounds/alice2.jpg" type="Texture" id=29]
 [ext_resource path="res://scenes/player/Tiles.tres" type="TileSet" id=30]
 [ext_resource path="res://assets/Vegetation/Comp 1/PlantSmall_00005.png" type="Texture" id=31]
+[ext_resource path="res://assets/Lights/light.png" type="Texture" id=32]
 
-[sub_resource type="OccluderPolygon2D" id=2]
+[sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 214, -476, 313, -401, 313, -395.3, 263, -329.3, 263, -323.7, 292.5, -307, 295.4, -307, 349, -282.3, 349, -281, 401, -245, 401, -243.8, 416, -228.8, 416, -226.6, 428, -207.6, 428, -204.4, 437, -181.4, 437, -176, 438.2, -161, 436.2, -161, 429.3, -146, 427.7, -146, 408.7, -131, 405.6, -131, 373.4, -118, 369.1, -118, 328.2, -108, 321.2, -108, 242.1, -101, 152, -101, 67, -103.9, 62, -101.6, 62, -99.8, 61.5, -97, 95, 41.8, 95, 49, 100, 92.9, 100, 154, 99, 154, 99, 343, 97.9, 343, 92.9, 416, 91.7, 416, 88.6, 430, 87.3, 430, 80.3, 446, 79.1, 446, 73.1, 455, 70.6, 455, 58.6, 463, 55.4, 463, 31.4, 472, 23.3, 472, -12.9, 477, -46, 477, -46, 475.4, -63, 469.4, -63, 467.8, -69, 461.8, -69, 459.4, -73, 449.4, -73, 423.8, -43, 269.6, -43, 263.8, -17, 98.7, -17, 87, -16, -20, -16.9, -20, -19.9, -67, -20.7, -67, -25.8, -101.1, -34, -103.4, -71, -98.2, -71, -97.4, -100.8, -90, -110.9, -90, -182, -85.9, -182, -87.1, -256, -91.1, -256, -92.3, -373, -111.3, -373, -112.3, -397, -117.4, -397, -118.7, -419, -130.8, -419, -133.1, -433, -148.2, -433, -151.7, -437, -163.7, -437, -186, -435.5, -186, -432.5, -197, -430.8, -197, -415.8, -212, -413.6, -212, -368.6, -241, -366.6, -241, -310, -272.2, -310, -273.1, -266, -302.1, -266, -302.9, -239, -326.9, -239, -328.7, -208.9, -365, -206.7, -365, -189.7, -379, -187.5, -379, -162.6, -394, -159.4, -394, -119.4, -410, -115.4, -410, -65, -419.4, -65, -417.8, 47, -404.8, 47, -403.7, 134.4, -387.4, 142, -392.1, 142, -393.7, 205, -475.7, 205, -478, 214, -478 )
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ) ],
 "loop": true,
@@ -48,6 +50,9 @@ polygon = PoolVector2Array( 5.5, -422.9, -355.5, -403.9, -355.5, -402.8, -395.5,
 [sub_resource type="OccluderPolygon2D" id=4]
 polygon = PoolVector2Array( 30, -343.8, 30, -342.4, 48, -336.4, 48, -335.1, 69, -323.2, 69, -321.8, 98, -291.8, 98, -289.5, 109, -270.5, 109, -267.3, 115, -247.3, 115, -223.8, 109.6, -202, 108.2, -202, 95.2, -177, 93.2, -177, 55.9, -174.1, 26, -144.2, 26, -143, 25.1, -122.8, 83, -107.5, 83, -106.3, 131, -86.3, 131, -85.1, 184, -50.1, 184, -48.8, 221, -12.8, 221, -10.7, 249, 26.3, 249, 28.5, 274, 78.5, 274, 82, 287, 128.7, 287, 136, 290.1, 195, 288.8, 195, 283.8, 236, 282.5, 236, 267.5, 285, 266.2, 285, 243.2, 329, 242, 329, 216, 364, 214.8, 364, 185.8, 393, 183.7, 393, 141.7, 424, 139.5, 424, 90.5, 448, 87.3, 448, 47.3, 460, 42.3, 460, 8, 465.3, 8, 463.9, -45, 459.9, -45, 458.5, -90, 447.6, -90, 446.3, -130, 429.3, -130, 428.1, -174, 400.1, -174, 398.9, -212, 363.9, -212, 361.7, -231, 339.7, -231, 337.6, -252, 305.6, -252, 303.3, -273, 254.4, -273, 250.4, -284, 195.2, -284, 175.9, -280.9, 120, -279.6, 120, -268.6, 73, -267.3, 73, -247.3, 27, -246.1, 27, -232.1, 3, -231, 3, -210, -25, -208.8, -25, -178.8, -55, -176.7, -55, -145.7, -79, -143.5, -79, -114.5, -96, -111.4, -96, -82.4, -109, -78.1, -109, -34, -121.5, -34, -146.2, -57.8, -169, -59.7, -169, -66.7, -175, -98, -175, -98, -178.5, -113, -207.5, -113, -212, -117, -228.8, -117, -251, -115.8, -251, -113.8, -267, -112.4, -267, -105.4, -287, -104, -287, -82, -317, -79.9, -317, -67.8, -328, -65.5, -328, -45.6, -340, -42.3, -340, -30.4, -345, -25.3, -345, -13, -346.8, -13, -348.2 )
 
+[sub_resource type="OccluderPolygon2D" id=5]
+polygon = PoolVector2Array( 445, -303, 448.1, -249, 446.1, -249, 406, -179.5, 406, -176.6, 376, -106.7, 376, -103.7, 357, -38.7, 357, -33.8, 340.7, 69, 339.5, 69, 330.5, 103, 329.4, 103, 317.4, 133, 316.1, 133, 295.1, 165, 293.9, 165, 263.9, 197, 261.7, 197, 233.7, 219, 231.5, 219, 203.5, 235, 200.5, 235, 192, 238.4, 192, 242, 283.4, 327.5, 282.4, 330, 280, 330, -126, 332, -126, 329.8, -128.4, 327.5, -127.3, 325, -125.9, 325, -118.9, 317, -116.7, 317, -34, 245.1, -33.3, 239.7, -77, 223.4, -77, 222.2, -103, 210.3, -103, 209.1, -138, 188.1, -138, 186.8, -166, 159.8, -166, 157.7, -181, 138, -182.6, 138, -210.5, 121, -212.5, 121, -285.5, 86, -288.4, 86, -341.3, 63, -344.3, 63, -395, 45.4, -395, 44.3, -414, 35.3, -414, 34, -436, 18, -436, 16.9, -452, -0.200012, -452, -2.39999, -469, -28.4, -469, -30.7, -479, -53.6, -479, -58, -485, -93.8, -485, -99.1, -480.8, -145, -479.4, -145, -467.4, -179, -466.1, -179, -460.1, -189, -458.8, -189, -444.8, -203, -442.7, -203, -435.7, -209, -433.4, -209, -413.4, -218, -409.1, -218, -392.2, -222, -369, -222, -369, -220.8, -337, -216.8, -337, -215.5, -282, -202.5, -284.5, -211, -285.2, -211, -305, -245.5, -305, -251.6, -315, -298.8, -315, -303.2, -313, -304.2, -313, -306, 445, -306 )
+
 [node name="Wonderland" type="Node2D"]
 position = Vector2( 0, -1 )
 script = ExtResource( 28 )
@@ -57,7 +62,7 @@ margin_left = -2987.0
 margin_top = -5207.0
 margin_right = 5607.0
 margin_bottom = 1579.0
-texture = ExtResource( 13 )
+texture = ExtResource( 29 )
 stretch_mode = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -83,6 +88,54 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Light_lightblue" type="Light2D" parent="."]
+position = Vector2( -1073.21, -363.077 )
+texture = ExtResource( 32 )
+texture_scale = 1.5
+color = Color( 0.192157, 0.917647, 0.85098, 1 )
+energy = 1.68
+mode = 2
+
+[node name="Light_darkblue" type="Light2D" parent="."]
+position = Vector2( -192.217, 421.81 )
+texture = ExtResource( 32 )
+texture_scale = 1.53
+color = Color( 0.113725, 0.533333, 0.643137, 1 )
+energy = 2.13
+mode = 2
+
+[node name="Light_pink" type="Light2D" parent="."]
+position = Vector2( 768.869, -432.489 )
+texture = ExtResource( 32 )
+texture_scale = 1.5
+color = Color( 0.972549, 0.584314, 0.968627, 1 )
+energy = 1.75
+mode = 2
+
+[node name="Light_purple" type="Light2D" parent="."]
+position = Vector2( 4538.46, -2157.11 )
+texture = ExtResource( 32 )
+texture_scale = 1.5
+color = Color( 0.466667, 0.345098, 0.768627, 1 )
+energy = 1.6
+mode = 2
+
+[node name="Light_green" type="Light2D" parent="."]
+position = Vector2( 2626.97, -838.281 )
+texture = ExtResource( 32 )
+texture_scale = 1.5
+color = Color( 0.34902, 0.94902, 0.682353, 1 )
+energy = 1.6
+mode = 2
+
+[node name="Light_green2" type="Light2D" parent="."]
+position = Vector2( 188.722, -2139.95 )
+texture = ExtResource( 32 )
+texture_scale = 1.5
+color = Color( 0.34902, 0.94902, 0.682353, 1 )
+energy = 1.6
+mode = 2
+
 [node name="Svamp" type="StaticBody2D" parent="."]
 position = Vector2( 0, 397 )
 rotation = 3.14159
@@ -105,13 +158,13 @@ polygon = PoolVector2Array( -439.089, -177.148, -431.506, -196.965, -421.159, -2
 position = Vector2( 2052.64, -748.966 )
 rotation = -0.254818
 scale = Vector2( 3.22252, 3.22252 )
-occluder = SubResource( 2 )
+occluder = SubResource( 1 )
 
 [node name="BigScale" type="TileMap" parent="."]
 scale = Vector2( 3, 3 )
 tile_set = ExtResource( 30 )
 format = 1
-tile_data = PoolIntArray( -1376242, 1610612794, 0, -1114094, 1610612798, 0, -917507, -1610612663, 0, -851946, 90, 0, -393204, 87, 0, -262156, 100, 0, -327667, -1610612660, 0, -196622, -1610612670, 0, -262142, 86, 0, -131086, -1610612672, 0, -196596, 61, 0, -65530, 98, 0, 7, 59, 0, 131062, -1610612648, 0, 65550, 94, 0, 131085, 64, 0 )
+tile_data = PoolIntArray( -1376242, 1610612794, 0, -1179656, -536870825, 0, -1114094, 1610612798, 0, -917507, -1610612663, 0, -851946, 90, 0, -393204, 87, 0, -262156, 100, 0, -327667, -1610612660, 0, -196622, -1610612670, 0, -262142, 86, 0, -131086, -1610612672, 0, -196596, 61, 0, -65530, 98, 0, 7, 59, 0, 131062, -1610612648, 0, 65550, 94, 0, 131085, 64, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -143,9 +196,9 @@ __meta__ = {
 position = Vector2( -1342.29, -2439.52 )
 rotation = 0.270526
 scale = Vector2( 0.395179, 0.416112 )
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "Eyes"
-frame = 338
+frame = 266
 speed_scale = 2.5
 playing = true
 
@@ -216,3 +269,6 @@ position = Vector2( -114.192, 29.1728 )
 rotation = -0.507891
 scale = Vector2( 1.83678, 1.83678 )
 occluder = SubResource( 4 )
+
+[node name="player" parent="." instance=ExtResource( 13 )]
+position = Vector2( -968.065, -893.803 )
