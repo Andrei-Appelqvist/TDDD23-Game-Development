@@ -26,6 +26,5 @@ func _integrate_forces(state):
     else:
         angular_damp = 8
 
-
-func _on_Node2D3_body_entered(body):
+func _on_seg_body_entered(body):
     $AudioStreamPlayer2D.play()

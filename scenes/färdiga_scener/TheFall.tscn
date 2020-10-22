@@ -174,7 +174,7 @@ __meta__ = {
 }
 
 [node name="Platform-despawner" type="Area2D" parent="."]
-position = Vector2( 5309.62, 4569.8 )
+position = Vector2( 5403.8, 4566.44 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform-despawner"]
 position = Vector2( -30.2041, 45.3062 )

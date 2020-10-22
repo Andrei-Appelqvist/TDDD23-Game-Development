@@ -3,6 +3,7 @@ extends Node2D
 var velocity = Vector2()
 var follow_birb = false
 var camera_done = false
+var current_area = 0
 func set_start_speed(velocity):
     $control.apply_impulse(Vector2(),velocity)
 
@@ -15,6 +16,7 @@ func save():
         "rotation": $control.global_rotation_degrees,
         "force_x": velocity.x,
         "force_y": velocity.y,
+        "music" : current_area,
     }
     print(save_dict)
     return save_dict
