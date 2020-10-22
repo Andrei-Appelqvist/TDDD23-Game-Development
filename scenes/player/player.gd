@@ -24,4 +24,4 @@ func _process(delta):
 		if camera_done == false:
 			get_parent().get_node("END-CAMERA").position = $control/Camera2D.global_position
 			camera_done = true
-		position = get_parent().get_node("Birb").position + Vector2(-200, -5)
+		position = get_parent().get_node("Birb").global_position + Vector2(-1000, -400)
