@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://res/Teletactile.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scripts/AcceptDialog.gd" type="Script" id=2]
@@ -6,19 +6,22 @@
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=4]
 [ext_resource path="res://scripts/MenuHead.gd" type="Script" id=5]
 [ext_resource path="res://assets/purplehead.png" type="Texture" id=6]
+[ext_resource path="res://assets/Backgrounds/menu_bg.png" type="Texture" id=7]
 [ext_resource path="res://res/light.png" type="Texture" id=8]
 
-[node name="ColorRect" type="ColorRect"]
+[node name="Background" type="TextureRect"]
 anchor_right = 0.389
-margin_right = 1422.08
+margin_left = 5.0
+margin_right = 1427.08
 margin_bottom = 1080.0
-color = Color( 0.0117188, 0.0117188, 0.0117188, 1 )
+texture = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Menu" type="MarginContainer" parent="."]
-margin_right = 1920.0
+margin_left = 11.8921
+margin_right = 1931.89
 margin_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -28,6 +31,7 @@ custom_constants/margin_left = 120
 custom_constants/margin_bottom = 80
 script = ExtResource( 4 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
