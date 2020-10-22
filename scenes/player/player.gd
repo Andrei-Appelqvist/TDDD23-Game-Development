@@ -7,10 +7,6 @@ var current_area = 0
 func set_start_speed(velocity):
 	$control.apply_impulse(Vector2(),velocity)
 
-func _ready():
-	$MusicPlayer.
-	pass
-	
 func save():
 	var save_dict = {
 		"filename" : get_filename(),
