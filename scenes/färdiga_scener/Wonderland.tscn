@@ -222,7 +222,7 @@ rotation = 0.270526
 scale = Vector2( 0.395179, 0.416112 )
 frames = SubResource( 2 )
 animation = "Eyes"
-frame = 103
+frame = 53
 speed_scale = 2.5
 playing = true
 
