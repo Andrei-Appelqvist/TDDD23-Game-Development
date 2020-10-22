@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Bounce"
-run/main_scene="res://scenes/Bird_end.tscn"
+run/main_scene="res://scenes/färdiga_scener/Menu.tscn"
 config/icon="res://assets/icon.png"
 
 [debug]

@@ -38,7 +38,7 @@ __meta__ = {
 [node name="HBoxContainer" type="HBoxContainer" parent="Menu"]
 margin_left = 120.0
 margin_top = 80.0
-margin_right = 1800.0
+margin_right = 1799.0
 margin_bottom = 1000.0
 alignment = 2
 
@@ -132,9 +132,9 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="Menu/HBoxContainer"]
-margin_left = 1105.0
+margin_left = 1104.0
 margin_top = 460.0
-margin_right = 1105.0
+margin_right = 1104.0
 margin_bottom = 460.0
 size_flags_horizontal = 6
 size_flags_vertical = 4
@@ -161,10 +161,9 @@ shadow_gradient_length = 0.5
 [node name="AcceptDialog" type="AcceptDialog" parent="Menu"]
 margin_left = 120.0
 margin_top = 80.0
-margin_right = 1800.0
+margin_right = 1799.0
 margin_bottom = 1000.0
 popup_exclusive = true
-window_title = "Varning!"
 dialog_text = "Starting a new game will overwrite your current save. Continue?"
 script = ExtResource( 2 )
 [connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Continue" to="Menu" method="_on_Continue_gui_signal"]
