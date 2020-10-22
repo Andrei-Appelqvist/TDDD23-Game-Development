@@ -21,51 +21,53 @@ angular_damp = 0.0
 show_behind_parent = true
 position = Vector2( 40, 0 )
 node_a = NodePath("..")
-node_b = NodePath("Node2D")
+node_b = NodePath("back1")
 
-[node name="Node2D" parent="control/PinJoint2D" instance=ExtResource( 2 )]
+[node name="back1" parent="control/PinJoint2D" instance=ExtResource( 2 )]
 position = Vector2( 50, 0 )
 
 [node name="PinJoint2D3" type="PinJoint2D" parent="control/PinJoint2D"]
 show_behind_parent = true
 position = Vector2( 90, 0 )
-node_a = NodePath("../Node2D")
-node_b = NodePath("Node2D2")
+node_a = NodePath("../back1")
+node_b = NodePath("back2")
 
-[node name="Node2D2" parent="control/PinJoint2D/PinJoint2D3" instance=ExtResource( 2 )]
+[node name="back2" parent="control/PinJoint2D/PinJoint2D3" instance=ExtResource( 2 )]
 position = Vector2( 40, 0 )
 
 [node name="PinJoint2D4" type="PinJoint2D" parent="control/PinJoint2D/PinJoint2D3"]
 show_behind_parent = true
 position = Vector2( 80, 0 )
-node_a = NodePath("../Node2D2")
-node_b = NodePath("Node2D3")
+node_a = NodePath("../back2")
+node_b = NodePath("end")
 
-[node name="Node2D3" parent="control/PinJoint2D/PinJoint2D3/PinJoint2D4" instance=ExtResource( 2 )]
+[node name="end" parent="control/PinJoint2D/PinJoint2D3/PinJoint2D4" instance=ExtResource( 2 )]
 show_behind_parent = true
 position = Vector2( 40, 0 )
+contacts_reported = 1
+contact_monitor = true
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="control"]
 position = Vector2( -40, 0 )
 node_a = NodePath("..")
-node_b = NodePath("Node2D2")
+node_b = NodePath("front1")
 
-[node name="Node2D2" parent="control/PinJoint2D2" instance=ExtResource( 2 )]
+[node name="front1" parent="control/PinJoint2D2" instance=ExtResource( 2 )]
 position = Vector2( -40, 0 )
 script = null
 
 [node name="PinJoint2D" type="PinJoint2D" parent="control/PinJoint2D2"]
 position = Vector2( -80, 0 )
-node_a = NodePath("../Node2D2")
-node_b = NodePath("Node2D2")
+node_a = NodePath("../front1")
+node_b = NodePath("front2")
 
-[node name="Node2D2" parent="control/PinJoint2D2/PinJoint2D" instance=ExtResource( 2 )]
+[node name="front2" parent="control/PinJoint2D2/PinJoint2D" instance=ExtResource( 2 )]
 position = Vector2( -40, 0 )
 script = null
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="control/PinJoint2D2/PinJoint2D"]
 position = Vector2( -80, 0 )
-node_a = NodePath("../Node2D2")
+node_a = NodePath("../front2")
 node_b = NodePath("../../../head")
 
 [node name="head" parent="control" instance=ExtResource( 3 )]
@@ -81,7 +83,7 @@ zoom = Vector2( 3, 3 )
 position = Vector2( 230, 0 )
 rotation = -1.5708
 node_a = NodePath("..")
-node_b = NodePath("../PinJoint2D/PinJoint2D3/PinJoint2D4/Node2D3")
+node_b = NodePath("../PinJoint2D/PinJoint2D3/PinJoint2D4/end")
 bias = 0.5
 length = 40.0
 initial_offset = 20.0
