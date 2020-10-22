@@ -69,34 +69,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Blackbox" type="TileMap" parent="."]
-scale = Vector2( 5, 5 )
-tile_set = ExtResource( 3 )
-format = 1
-tile_data = PoolIntArray( 262101, 18, 0, 262109, 18, 0, 262117, 18, 0, 262125, 18, 0, 262133, 18, 0, 262141, 18, 0, 196611, 18, 0, 196617, 18, 0, 196625, 18, 0, 196632, 18, 0, 196640, 18, 0, 196648, 18, 0, 196656, 18, 0, 196664, 18, 0, 196672, 18, 0 )
-
-[node name="buske2" type="Sprite" parent="."]
-modulate = Color( 0.329412, 0.772549, 0.129412, 1 )
-position = Vector2( 9623.31, 216.489 )
-scale = Vector2( 1.07014, 1.07014 )
-texture = ExtResource( 8 )
-
-[node name="big-scale-back" type="TileMap" parent="."]
-scale = Vector2( 4, 4 )
-tile_set = ExtResource( 3 )
-collision_layer = 0
-collision_mask = 0
-occluder_light_mask = 0
-format = 1
-tile_data = PoolIntArray( -589809, 130, 0, -327675, 115, 0, -65493, 69, 0 )
-
-[node name="big-scale-back2" type="TileMap" parent="."]
-scale = Vector2( 5, 5 )
-tile_set = ExtResource( 3 )
-occluder_light_mask = 0
-format = 1
-tile_data = PoolIntArray( -720857, 59, 0, -655324, 1610612849, 0, -196574, 59, 0, -131042, 69, 0, -65493, 69, 0, 27, 62, 0 )
-
 [node name="Trunk" type="StaticBody2D" parent="."]
 position = Vector2( 15735.2, -1623.37 )
 scale = Vector2( 3.54749, 3.54749 )
@@ -108,11 +80,23 @@ texture = ExtResource( 7 )
 visible = false
 polygon = PoolVector2Array( -1891.47, 687.727, -1841.86, 631.349, -1670.47, 482.511, -1465.25, 369.755, -1025.51, 200.622, -978.148, 160.03, -847.351, -207.554, -750.381, -534.546, 837.22, -545.822, 846.24, -315.8, 1019.88, 229.938, 1279.22, 450.94, 1364.92, 489.276, 1649.06, 550.165, 1863.3, 719.298 )
 
+[node name="Blackbox" type="TileMap" parent="."]
+scale = Vector2( 5, 5 )
+tile_set = ExtResource( 3 )
+format = 1
+tile_data = PoolIntArray( 262101, 18, 0, 262109, 18, 0, 262117, 18, 0, 262125, 18, 0, 262133, 18, 0, 262141, 18, 0, 196611, 18, 0, 196617, 18, 0, 196625, 18, 0, 196632, 18, 0, 196636, 18, 0, 196640, 18, 0, 196644, 18, 0, 196648, 18, 0, 196656, 18, 0, 196664, 18, 0, 196672, 18, 0 )
+
 [node name="buske1" type="Sprite" parent="."]
 modulate = Color( 0.207843, 0.694118, 0.227451, 1 )
 position = Vector2( 4310.15, 71.6017 )
 scale = Vector2( 2.14691, 2.14692 )
 texture = ExtResource( 5 )
+
+[node name="buske2" type="Sprite" parent="."]
+modulate = Color( 0.329412, 0.772549, 0.129412, 1 )
+position = Vector2( 9623.31, 216.489 )
+scale = Vector2( 1.07014, 1.07014 )
+texture = ExtResource( 8 )
 
 [node name="Skylt" type="Sprite" parent="."]
 position = Vector2( -817.909, -159.344 )
@@ -132,6 +116,22 @@ polygon = PoolVector2Array( -2826.92, 696.24, -3460.49, 594.417, -3833.84, 436.0
 [node name="TileMap" type="TileMap" parent="Big-tree"]
 tile_set = ExtResource( 3 )
 format = 1
+
+[node name="big-scale-back" type="TileMap" parent="."]
+scale = Vector2( 4, 4 )
+tile_set = ExtResource( 3 )
+collision_layer = 0
+collision_mask = 0
+occluder_light_mask = 0
+format = 1
+tile_data = PoolIntArray( -589809, 130, 0, -327675, 115, 0, -65493, 69, 0 )
+
+[node name="big-scale-back2" type="TileMap" parent="."]
+scale = Vector2( 5, 5 )
+tile_set = ExtResource( 3 )
+occluder_light_mask = 0
+format = 1
+tile_data = PoolIntArray( -720857, 59, 0, -655324, 1610612849, 0, -196574, 59, 0, -131042, 69, 0, -65493, 69, 0, 27, 62, 0 )
 
 [node name="Big-scale" type="TileMap" parent="."]
 scale = Vector2( 5, 5 )
