@@ -159,7 +159,7 @@ scale = Vector2( 0.395179, 0.416112 )
 z_index = 8
 frames = SubResource( 1 )
 animation = "Eyes"
-frame = 417
+frame = 224
 speed_scale = 2.5
 playing = true
 
@@ -255,4 +255,4 @@ scale = Vector2( 1.83678, 1.83678 )
 occluder = SubResource( 5 )
 
 [node name="player" parent="." instance=ExtResource( 29 )]
-position = Vector2( -832.939, -32.0361 )
+position = Vector2( -641.431, 68.7578 )
