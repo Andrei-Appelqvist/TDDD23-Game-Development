@@ -20,7 +20,7 @@ func NewGame_gui_input(event):
         if save_exists:
             $AcceptDialog.show()
         else:
-            get_tree().change_scene("res://scenes/Main.tscn")
+            get_tree().change_scene("res://scenes/newgame_cutscene.tscn")
     pass # Replace with function body.
 
 
@@ -36,4 +36,4 @@ func Credits_gui_input(event):
 func AcceptDialog_confirmed():
     var save_dir = Directory.new()
     save_dir.remove("user://savegame.save")
-    get_tree().change_scene("res://scenes/Main.tscn")
+    get_tree().change_scene("res://scenes/newgame_cutscene.tscn")
