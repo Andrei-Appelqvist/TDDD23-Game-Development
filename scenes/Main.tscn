@@ -25,18 +25,19 @@ __meta__ = {
 position = Vector2( 21862.4, -3950.67 )
 
 [node name="Wonderland" parent="." instance=ExtResource( 5 )]
-position = Vector2( 15313.9, 3588.87 )
+position = Vector2( 14985, 3546.61 )
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 7514, 13088.8 )
 
 [node name="Hell" parent="Node2D" instance=ExtResource( 7 )]
-position = Vector2( 6033.01, -4019.76 )
+position = Vector2( 5698.76, -4062.07 )
 
 [node name="RockBottom" parent="Node2D" instance=ExtResource( 4 )]
+position = Vector2( -321.708, -26.3477 )
 
 [node name="TheFall" parent="." instance=ExtResource( 1 )]
-position = Vector2( 373, -557 )
+position = Vector2( 72.47, -530.846 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 3870.39, -992.232 )
+position = Vector2( 13433.6, 6113.62 )
