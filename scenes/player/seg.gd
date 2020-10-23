@@ -27,4 +27,5 @@ func _integrate_forces(state):
         angular_damp = 8
 
 func _on_seg_body_entered(body):
-    $AudioStreamPlayer2D.play()
+	#$AudioStreamPlayer2D.play()
+	pass

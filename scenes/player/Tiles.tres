@@ -3520,3 +3520,17 @@ points = PoolVector2Array( 26.9601, 362.32, 37.04, 333.52, 44.2401, 267.28, 24.0
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 130/z_index = 0
+131/name = "Mossy - Hanging Plants.png 131"
+131/texture = ExtResource( 53 )
+131/tex_offset = Vector2( 0, 0 )
+131/modulate = Color( 1, 1, 1, 1 )
+131/region = Rect2( 1216, 2528, 96, 64 )
+131/tile_mode = 0
+131/occluder_offset = Vector2( 0, 0 )
+131/navigation_offset = Vector2( 0, 0 )
+131/shape_offset = Vector2( 0, 0 )
+131/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+131/shape_one_way = false
+131/shape_one_way_margin = 0.0
+131/shapes = [  ]
+131/z_index = 0

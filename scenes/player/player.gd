@@ -28,16 +28,17 @@ func save():
     print(save_dict)
     return save_dict
 
-func _process(delta):
-    if follow_birb == true:
-        if camera_done == false:
-            get_parent().get_node("END-CAMERA").position = $control/Camera2D.global_position
-            camera_done = true
-        position = get_parent().get_node("Birb").global_position + Vector2(-1000, -400)
-
 func play_song(list_index):
     $music_player.stop()
     var song = load(music_list[list_index])
     $music_player.stream = song
     $music_player.play()
-    
+
+func _process(delta):
+	if follow_birb == true:
+		if camera_done == false:
+			
+			get_parent().get_node("END").position = get_parent().get_node("player/control/Camera2D").global_position
+			camera_done = true
+			
+		$control.global_position = get_parent().get_node("END/Birb").global_position
