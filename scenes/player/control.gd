@@ -4,7 +4,7 @@ var rotation_mult = 1.0
 var frozen = false
 
 func _ready():
-    Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
     if event is InputEventMouseMotion and frozen == false:
