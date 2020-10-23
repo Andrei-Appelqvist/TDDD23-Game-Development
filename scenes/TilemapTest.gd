@@ -37,6 +37,7 @@ func _on_Area2D_body_entered(body):
     if get_parent().get_node("player/control").frozen == false:
         get_parent().get_node("player/control").frozen = true
         get_node("Birb/AnimationPlayer").play("birb")
+        $AudioStreamPlayer2D.play()
     pass # Replace with function body.
 
 
