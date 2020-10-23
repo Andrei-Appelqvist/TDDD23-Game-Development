@@ -6,6 +6,7 @@ func _ready():
     var save_game = File.new()
     if not save_game.file_exists("user://savegame.save"):
         save_exists = false
+        $HBoxContainer/VBoxContainer/Continue.modulate.a = 0.6
         
         
     

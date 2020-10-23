@@ -12,7 +12,7 @@ func set_start_speed(velocity):
 func _ready():
     music_list[0] = "res://assets/audio/plank-pose.ogg"
     music_list[1] = "res://assets/audio/tmp_music/Jepyang - Jagnype - 05 Brass Lanterns.wav"
-    play_song(0)
+    play_song(current_song, true)
     
 func save():
     var save_dict = {
@@ -28,11 +28,14 @@ func save():
     print(save_dict)
     return save_dict
 
-func play_song(list_index):
-    $control/music_player.stop()
-    var song = load(music_list[list_index])
-    $control/music_player.stream = song
-    $control/music_player.play()
+func play_song(list_index, override = false):
+    if current_song != list_index || override:
+        current_song = list_index
+        $control/music_player.stop()
+        var song = load(music_list[list_index])
+        current_song = list_index
+        $control/music_player.stream = song
+        $control/music_player.play()
 
 func _process(delta):
     if follow_birb == true:
