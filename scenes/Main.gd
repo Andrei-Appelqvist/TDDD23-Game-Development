@@ -2,8 +2,8 @@ extends Node2D
 var player
 var entered_area = {}
 func _ready():
-	player = $player
-	load_game()
+    player = $player
+    load_game()
 
 func _input(event):
     #if event.is_action_pressed("ui_down"):
@@ -19,35 +19,35 @@ func _input(event):
         get_tree().change_scene("res://scenes/färdiga_scener/Menu.tscn")
 
 func _notification(what):
-	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
-		save_game()
-		get_tree().quit() # default behavior
+    if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+        save_game()
+        get_tree().quit() # default behavior
 
 
 
 func save_game():
-	print("entered save")
-	var save_game = File.new()
-	save_game.open("user://savegame.save", File.WRITE)
-	var save_nodes = get_tree().get_nodes_in_group("Persist")
-	for node in save_nodes:
-		# Check the node is an instanced scene so it can be instanced again during load.
-		if node.filename.empty():
-			print("persistent node '%s' is not an instanced scene, skipped" % node.name)
-			continue
+    print("entered save")
+    var save_game = File.new()
+    save_game.open("user://savegame.save", File.WRITE)
+    var save_nodes = get_tree().get_nodes_in_group("Persist")
+    for node in save_nodes:
+        # Check the node is an instanced scene so it can be instanced again during load.
+        if node.filename.empty():
+            print("persistent node '%s' is not an instanced scene, skipped" % node.name)
+            continue
 
-		# Check the node has a save function.
-		if !node.has_method("save"):
-			print("persistent node '%s' is missing a save() function, skipped" % node.name)
-			continue
+        # Check the node has a save function.
+        if !node.has_method("save"):
+            print("persistent node '%s' is missing a save() function, skipped" % node.name)
+            continue
 
-		# Call the node's save function.
-		var node_data = node.call("save")
+        # Call the node's save function.
+        var node_data = node.call("save")
 
-		# Store the save dictionary as a new line in the save file.
-		save_game.store_line(to_json(node_data))
-	save_game.close()
-	print("saving done")
+        # Store the save dictionary as a new line in the save file.
+        save_game.store_line(to_json(node_data))
+    save_game.close()
+    print("saving done")
 
 func load_game():
     var save_game = File.new()
@@ -55,16 +55,16 @@ func load_game():
         player.play_song(0, true)
         return
 
-	var save_nodes = get_tree().get_nodes_in_group("Persist")
-	for i in save_nodes:
-		i.queue_free()
+    var save_nodes = get_tree().get_nodes_in_group("Persist")
+    for i in save_nodes:
+        i.queue_free()
 
-	# Load the file line by line and process that dictionary to restore
-	# the object it represents.
-	save_game.open("user://savegame.save", File.READ)
-	while save_game.get_position() < save_game.get_len():
-		# Get the saved dictionary from the next line in the save file
-		var node_data = parse_json(save_game.get_line())
+    # Load the file line by line and process that dictionary to restore
+    # the object it represents.
+    save_game.open("user://savegame.save", File.READ)
+    while save_game.get_position() < save_game.get_len():
+        # Get the saved dictionary from the next line in the save file
+        var node_data = parse_json(save_game.get_line())
 
         # Firstly, we need to create the object and add it to the tree and set its position.
         player = load(node_data["filename"]).instance()
