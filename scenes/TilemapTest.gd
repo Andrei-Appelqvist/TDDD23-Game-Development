@@ -33,15 +33,15 @@ func _on_Fallholderdespawner_body_entered(body):
 
 
 func _on_Area2D_body_entered(body):
-	print(body)
-	if get_parent().get_node("player/control").frozen == false:
-		get_parent().get_node("player/control").frozen = true
-		get_node("Birb/AnimationPlayer").play("birb")
-	pass # Replace with function body.
+    print(body)
+    if get_parent().get_node("player/control").frozen == false:
+        get_parent().get_node("player/control").frozen = true
+        get_node("Birb/AnimationPlayer").play("birb")
+    pass # Replace with function body.
 
 
 func _on_Birb_body_entered(body):
-	get_parent().get_node("player").follow_birb = true
-	get_node("END-CAMERA").current = true
-	print("Fuck yeah!")
-	pass # Replace with function body.
+    get_parent().get_node("player").follow_birb = true
+    get_node("END-CAMERA").current = true
+    print("Fuck yeah!")
+    pass # Replace with function body.
