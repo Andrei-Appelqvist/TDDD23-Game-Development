@@ -34,6 +34,7 @@ position = Vector2( 7514, 13088.8 )
 position = Vector2( 6033.01, -4019.76 )
 
 [node name="RockBottom" parent="Node2D" instance=ExtResource( 4 )]
+position = Vector2( 5.03955, -2.52051 )
 
 [node name="TheFall" parent="." instance=ExtResource( 1 )]
 position = Vector2( 373, -557 )

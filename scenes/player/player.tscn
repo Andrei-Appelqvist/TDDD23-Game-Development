@@ -96,3 +96,5 @@ node_b = NodePath("../head")
 bias = 0.5
 length = 6.0
 initial_offset = 3.0
+
+[node name="music_player" type="AudioStreamPlayer2D" parent="."]
