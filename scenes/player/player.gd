@@ -11,8 +11,9 @@ func set_start_speed(velocity):
     
 func _ready():
     music_list[0] = "res://assets/audio/plank-pose.ogg"
-    music_list[1] = "res://assets/audio/Brass-Lanterns.ogg"
+    music_list[1] = "res://assets/audio/Brass-Laterns.ogg"
     music_list[2] = "res://assets/audio/Skwun.ogg"
+    music_list[3] = "res://assets/audio/deepwoods.ogg"
     play_song(current_song, true)
     
 func save():
@@ -51,6 +52,3 @@ func _on_Tween_tween_all_completed():
     $control/music_player.stream = song
     $control/music_player.volume_db = -12
     $control/music_player.play()
-    #$FadeInTween.interpolate_property($control/music_player, "volume_db", -80, -12, 1, 1, Tween.EASE_IN, 0)
-    #$FadeInTween.start()
-    pass # Replace with function body.

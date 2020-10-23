@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
+[ext_resource path="res://assets/audio/hawk.wav" type="AudioStream" id=1]
 [ext_resource path="res://scenes/AnimationPlayer.gd" type="Script" id=2]
 [ext_resource path="res://scenes/player/Tiles.tres" type="TileSet" id=3]
 [ext_resource path="res://scenes/TilemapTest.gd" type="Script" id=4]
@@ -226,5 +227,8 @@ tile_data = PoolIntArray( 196614, 18, 0, 196622, 18, 0, 196630, 18, 0, 196638, 1
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
 [connection signal="body_entered" from="Birb" to="." method="_on_Birb_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

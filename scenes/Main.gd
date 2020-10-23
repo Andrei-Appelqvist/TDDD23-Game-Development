@@ -85,3 +85,8 @@ func load_game():
 func _on_Area2D_body_entered(body):
     player.play_song(1)
     pass # Replace with function body.
+
+
+func _on_Area2D2_body_entered(body):
+    player.play_song(3)
+    pass # Replace with function body.
