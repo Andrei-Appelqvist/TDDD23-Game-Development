@@ -9,7 +9,7 @@
 [ext_resource path="res://scenes/hell.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 675.027, 42.7778 )
+extents = Vector2( 572.152, 120.799 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
@@ -21,6 +21,7 @@ margin_right = 46075.0
 margin_bottom = 21611.0
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -43,10 +44,11 @@ position = Vector2( 72.47, -530.846 )
 position = Vector2( -553.4, -665.72 )
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 4648.47, 7880.67 )
+position = Vector2( 12251.7, 10571.7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 311.572, -35.6763 )
+position = Vector2( 563.287, 246.005 )
+rotation = -1.26711
 shape = SubResource( 1 )
 
 [node name="music" type="Node2D" parent="."]

@@ -11,7 +11,8 @@ func set_start_speed(velocity):
     
 func _ready():
     music_list[0] = "res://assets/audio/plank-pose.ogg"
-    music_list[1] = "res://assets/audio/tmp_music/Jepyang - Jagnype - 05 Brass Lanterns.wav"
+    music_list[1] = "res://assets/audio/Brass-Lanterns.ogg"
+    music_list[2] = "res://assets/audio/Skwun.ogg"
     play_song(current_song, true)
     
 func save():
@@ -31,12 +32,9 @@ func save():
 func play_song(list_index, override = false):
     if current_song != list_index || override:
         current_song = list_index
-        $control/music_player.stop()
-        var song = load(music_list[list_index])
-        current_song = list_index
-        $control/music_player.stream = song
-        $control/music_player.play()
-
+        $FadeOutTween.interpolate_property($control/music_player, "volume_db", -12, -80, 3, 1, Tween.EASE_IN, 0)
+        $FadeOutTween.start()
+       
 func _process(delta):
     if follow_birb == true:
         if camera_done == false:
@@ -45,3 +43,14 @@ func _process(delta):
             camera_done = true
             
         $control.global_position = get_parent().get_node("END/Birb").global_position
+
+
+func _on_Tween_tween_all_completed():
+    $control/music_player.stop()
+    var song = load(music_list[current_song])
+    $control/music_player.stream = song
+    $control/music_player.volume_db = -12
+    $control/music_player.play()
+    #$FadeInTween.interpolate_property($control/music_player, "volume_db", -80, -12, 1, 1, Tween.EASE_IN, 0)
+    #$FadeInTween.start()
+    pass # Replace with function body.
