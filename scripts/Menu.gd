@@ -6,9 +6,8 @@ func _ready():
     var save_game = File.new()
     if not save_game.file_exists("user://savegame.save"):
         save_exists = false
+        $HBoxContainer/VBoxContainer/Continue.modulate.a = 0.6
         
-        
-    
 func _on_Continue_gui_signal(event):
     if event.is_action_pressed("jump") and save_exists:
         get_node("HBoxContainer/VBoxContainer/Continue").add_color_override("Red", Color.red)

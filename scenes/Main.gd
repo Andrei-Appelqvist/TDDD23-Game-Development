@@ -1,19 +1,19 @@
 extends Node2D
 var player
-
+var entered_area = {}
 func _ready():
     player = $player
     load_game()
 
 func _input(event):
-    if event.is_action_pressed("ui_down"):
-        get_tree().quit()
-    elif event.is_action_pressed("ui_left"):
+    #if event.is_action_pressed("ui_down"):
+        #get_tree().quit()
+    if event.is_action_pressed("ui_left"):
         player.queue_free()
         player = load("res://scenes/player/player.tscn").instance()
         add_child(player)
-    elif event.is_action_pressed("ui_up"):
-        save_game()
+    #elif event.is_action_pressed("ui_up"):
+        #save_game()
     elif event.is_action_pressed("ui_cancel"):
         save_game()
         get_tree().change_scene("res://scenes/färdiga_scener/Menu.tscn")
@@ -52,6 +52,7 @@ func save_game():
 func load_game():
     var save_game = File.new()
     if not save_game.file_exists("user://savegame.save"):
+        player.play_song(0, true)
         return
 
     var save_nodes = get_tree().get_nodes_in_group("Persist")
@@ -71,7 +72,7 @@ func load_game():
         player.position = Vector2(node_data["pos_x"], node_data["pos_y"])
         player.rotation_degrees = node_data["rotation"] + 180
         player.set_start_speed(Vector2(node_data["force_x"], node_data["force_y"]))
-
+        player.current_song = node_data["music"]
         # Now we set the remaining variables.
         """
         for i in node_data.keys():
@@ -80,3 +81,7 @@ func load_game():
             new_object.set(i, node_data[i])
         """
     save_game.close()
+
+func _on_Area2D_body_entered(body):
+    player.play_song(1)
+    pass # Replace with function body.
