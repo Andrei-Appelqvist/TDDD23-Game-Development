@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/färdiga_scener/TheFall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://scenes/färdiga_scener/Wonderland.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/Bird_end.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/hell.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
@@ -27,17 +29,19 @@ position = Vector2( 21862.4, -3950.67 )
 [node name="Wonderland" parent="." instance=ExtResource( 5 )]
 position = Vector2( 14985, 3546.61 )
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2( 7514, 13088.8 )
+[node name="Hell" parent="." instance=ExtResource( 7 )]
+position = Vector2( 13212.8, 9026.73 )
 
-[node name="Hell" parent="Node2D" instance=ExtResource( 7 )]
-position = Vector2( 5698.76, -4062.07 )
-
-[node name="RockBottom" parent="Node2D" instance=ExtResource( 4 )]
-position = Vector2( -321.708, -26.3477 )
+[node name="RockBottom" parent="." instance=ExtResource( 4 )]
+position = Vector2( 7192.29, 13062.5 )
 
 [node name="TheFall" parent="." instance=ExtResource( 1 )]
 position = Vector2( 47.0429, -522.37 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 14601.4, 3633.34 )
+position = Vector2( 12790.6, 6086.28 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
