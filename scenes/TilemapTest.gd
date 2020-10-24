@@ -44,5 +44,8 @@ func _on_Area2D_body_entered(body):
 func _on_Birb_body_entered(body):
     get_parent().get_node("player").follow_birb = true
     get_node("END-CAMERA").current = true
-    print("Fuck yeah!")
+    get_node("end-text").fade(3, 0)
+    get_node("black-rect").fade(3,0)
+
+
     pass # Replace with function body.
