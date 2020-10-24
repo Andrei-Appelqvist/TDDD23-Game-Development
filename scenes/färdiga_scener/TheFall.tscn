@@ -50,10 +50,10 @@ __meta__ = {
 }
 
 [node name="TextureRect3" type="TextureRect" parent="."]
-margin_left = -3106.41
-margin_top = -2313.41
-margin_right = 7421.59
-margin_bottom = 2215.59
+margin_left = -3115.0
+margin_top = -2313.0
+margin_right = 7421.0
+margin_bottom = 2080.0
 texture = ExtResource( 5 )
 stretch_mode = 2
 __meta__ = {
@@ -62,7 +62,7 @@ __meta__ = {
 
 [node name="Gradient" type="Sprite" parent="."]
 material = SubResource( 1 )
-position = Vector2( 5346.78, 1327.16 )
+position = Vector2( 5288.37, 1073.58 )
 rotation = -1.5708
 scale = Vector2( 1, 3483 )
 texture = SubResource( 3 )

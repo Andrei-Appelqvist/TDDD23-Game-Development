@@ -9,6 +9,7 @@ anchor_bottom = 1.0
 stream = ExtResource( 1 )
 volume_db = -12.0
 autoplay = true
+buffering_msec = 10
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
