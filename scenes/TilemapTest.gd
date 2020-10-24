@@ -46,6 +46,9 @@ func _on_Birb_body_entered(body):
     get_node("END-CAMERA").current = true
     get_node("end-text").fade(3, 0)
     get_node("black-rect").fade(3,0)
+    
+func _on_blackrect_fade_complete():
+    get_tree().change_scene("res://scenes/credits_cutscene.tscn")
 
 
     pass # Replace with function body.

@@ -275,3 +275,4 @@ __meta__ = {
 }
 [connection signal="body_entered" from="Birb" to="." method="_on_Birb_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="fade_complete" from="black-rect" to="." method="_on_blackrect_fade_complete"]

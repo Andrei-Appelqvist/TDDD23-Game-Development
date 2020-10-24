@@ -4,16 +4,15 @@ var velocity = Vector2()
 var follow_birb = false
 var camera_done = false
 var current_song = 0
-var music_list = {}
+var music_list = {0 : "res://assets/audio/plank-pose.ogg",
+    1 : "res://assets/audio/Brass-Laterns.ogg",
+    2 : "res://assets/audio/Skwun.ogg",
+    3 : "res://assets/audio/deepwoods.ogg"}
 
 func set_start_speed(velocity):
     $control.apply_impulse(Vector2(),velocity)
     
 func _ready():
-    music_list[0] = "res://assets/audio/plank-pose.ogg"
-    music_list[1] = "res://assets/audio/Brass-Laterns.ogg"
-    music_list[2] = "res://assets/audio/Skwun.ogg"
-    music_list[3] = "res://assets/audio/deepwoods.ogg"
     play_song(current_song, true)
     
 func save():

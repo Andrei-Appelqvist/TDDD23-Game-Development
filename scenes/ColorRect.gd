@@ -29,3 +29,4 @@ func _process(delta):
         else:
             var time_left_ratio = delta / fade_info['time-left']
             self.modulate.a += (fade_info['dest-alpha'] - self.modulate.a) * time_left_ratio
+
