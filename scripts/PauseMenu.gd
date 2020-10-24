@@ -11,12 +11,6 @@ func SliderMouse_value_changed(value):
 func SliderVolume_value_changed(value):
     GlobalVariables.volume = value
     AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), value)
-
-func _input(event):
-    if event.is_action_pressed("ui_cancel"):
-        visible = false
-        Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-        get_tree().paused = false
         
 func Menu_visibility_changed():
     print(self.rect_position)

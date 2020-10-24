@@ -13,9 +13,14 @@ func _input(event):
         add_child(player)
         move_child(player, 6)
     elif event.is_action_pressed("ui_cancel"):
-        get_tree().paused = true
-        Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-        $Menu.visible = true
+        if get_tree().paused:
+            get_tree().paused = false
+            Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+            $Menu.visible = false
+        else:
+            get_tree().paused = true
+            Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+            $Menu.visible = true
         save_game()
 
 func _notification(what):

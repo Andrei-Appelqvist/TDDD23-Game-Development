@@ -17,6 +17,7 @@ pause_mode = 2
 script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
+pause_mode = 1
 margin_left = -5103.0
 margin_top = -3743.0
 margin_right = 46075.0
@@ -28,24 +29,31 @@ __meta__ = {
 }
 
 [node name="END" parent="." instance=ExtResource( 6 )]
+pause_mode = 1
 position = Vector2( 21862.4, -3950.67 )
 
 [node name="Wonderland" parent="." instance=ExtResource( 5 )]
+pause_mode = 1
 position = Vector2( 14985, 3546.61 )
 
 [node name="Hell" parent="." instance=ExtResource( 7 )]
+pause_mode = 1
 position = Vector2( 13212.8, 9026.73 )
 
 [node name="RockBottom" parent="." instance=ExtResource( 4 )]
+pause_mode = 1
 position = Vector2( 7192.29, 13062.5 )
 
 [node name="TheFall" parent="." instance=ExtResource( 1 )]
+pause_mode = 1
 position = Vector2( 72.47, -530.846 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
+pause_mode = 1
 position = Vector2( -209.125, -128.146 )
 
 [node name="Area2D" type="Area2D" parent="."]
+pause_mode = 1
 position = Vector2( 12251.7, 10571.7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -54,6 +62,7 @@ rotation = -1.26711
 shape = SubResource( 1 )
 
 [node name="Area2D2" type="Area2D" parent="."]
+pause_mode = 1
 position = Vector2( 12251.7, 10571.7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
