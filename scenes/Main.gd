@@ -72,7 +72,7 @@ func load_game():
         player.position = Vector2(node_data["pos_x"], node_data["pos_y"])
         player.rotation_degrees = node_data["rotation"] + 180
         player.set_start_speed(Vector2(node_data["force_x"], node_data["force_y"]))
-        player.current_song = node_data["music"]
+        player.current_song = int(node_data["music"])
         # Now we set the remaining variables.
         """
         for i in node_data.keys():

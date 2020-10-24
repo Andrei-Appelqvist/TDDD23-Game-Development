@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://res/MenuFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scripts/AcceptDialog.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/purplehead.png" type="Texture" id=6]
 [ext_resource path="res://assets/Backgrounds/menu_bg.png" type="Texture" id=7]
 [ext_resource path="res://res/light.png" type="Texture" id=8]
+[ext_resource path="res://scripts/ColorRect.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/Hand Drawn Shapes.ttf"
@@ -24,6 +25,7 @@ anchor_right = 0.389
 margin_right = 1422.08
 margin_bottom = 1080.0
 texture = ExtResource( 7 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
@@ -53,7 +55,6 @@ custom_constants/margin_right = 120
 custom_constants/margin_top = 80
 custom_constants/margin_left = 120
 custom_constants/margin_bottom = 80
-script = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
@@ -217,8 +218,8 @@ __meta__ = {
 [node name="AcceptDialog" type="AcceptDialog" parent="Menu"]
 margin_left = 120.0
 margin_top = 80.0
-margin_right = 1799.0
-margin_bottom = 1000.0
+margin_right = 540.0
+margin_bottom = 138.0
 popup_exclusive = true
 window_title = "Warning!"
 dialog_text = "Starting a new game will overwrite your current save. Continue?"
@@ -226,8 +227,21 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
-[connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Continue" to="Menu" method="_on_Continue_gui_signal"]
-[connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/NewGame" to="Menu" method="NewGame_gui_input"]
-[connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Credits" to="Menu" method="Credits_gui_input"]
-[connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Quit" to="Menu" method="Quit_gui_input"]
-[connection signal="confirmed" from="Menu/AcceptDialog" to="Menu" method="AcceptDialog_confirmed"]
+
+[node name="black-rect" type="ColorRect" parent="."]
+margin_left = -247.0
+margin_top = -207.0
+margin_right = 2215.0
+margin_bottom = 1301.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Continue" to="." method="_on_Continue_gui_signal"]
+[connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/NewGame" to="." method="NewGame_gui_input"]
+[connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Credits" to="." method="Credits_gui_input"]
+[connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Quit" to="." method="Quit_gui_input"]
+[connection signal="confirmed" from="Menu/AcceptDialog" to="." method="AcceptDialog_confirmed"]
+[connection signal="fade_complete" from="black-rect" to="." method="_on_blackrect_fade_complete"]
