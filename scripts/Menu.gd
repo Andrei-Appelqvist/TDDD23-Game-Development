@@ -29,7 +29,8 @@ func Quit_gui_input(event):
 
 
 func Credits_gui_input(event):
-    pass # Replace with function body.
+    if event.is_action_pressed("jump"):
+        get_tree().change_scene("res://scenes/credits_cutscene.tscn")
 
 
 func AcceptDialog_confirmed():
