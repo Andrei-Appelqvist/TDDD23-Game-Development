@@ -22,6 +22,7 @@ config/icon="res://assets/icon.png"
 [autoload]
 
 Screen="*res://scripts/Screen.gd"
+GlobalVariables="*res://scripts/GlobalVariables.gd"
 
 [debug]
 

@@ -9,7 +9,7 @@ func _ready():
         save_exists = false
         $Menu/HBoxContainer/VBoxContainer/Continue.modulate.a = 0.6
         
-func _on_Continue_gui_signal(event):
+func Continue_gui_input(event):
     if event.is_action_pressed("jump") and save_exists:
         $"black-rect".fade(0.5, 0)
         to_scene = "res://scenes/Main.tscn"

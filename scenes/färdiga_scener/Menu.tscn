@@ -31,6 +31,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="black-rect" type="ColorRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0.356863 )
+margin_left = -247.0
+margin_top = -207.0
+margin_right = 2215.0
+margin_bottom = 1301.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
 [node name="Label-title" type="Label" parent="."]
 margin_left = 1.0
 margin_top = 1.0
@@ -42,13 +56,15 @@ text = "NATURAL SELECTION"
 align = 1
 valign = 1
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Menu" type="MarginContainer" parent="."]
-margin_left = 11.8921
-margin_right = 1931.89
-margin_bottom = 1080.0
+margin_left = 131.892
+margin_top = 80.0
+margin_right = 1810.89
+margin_bottom = 1000.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_constants/margin_right = 120
@@ -63,8 +79,8 @@ __meta__ = {
 [node name="HBoxContainer" type="HBoxContainer" parent="Menu"]
 margin_left = 120.0
 margin_top = 80.0
-margin_right = 1799.0
-margin_bottom = 1000.0
+margin_right = 1558.0
+margin_bottom = 840.0
 alignment = 2
 __meta__ = {
 "_edit_lock_": true
@@ -72,16 +88,16 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menu/HBoxContainer"]
 margin_right = 526.0
-margin_bottom = 920.0
+margin_bottom = 760.0
 alignment = 1
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Continue" type="TextureRect" parent="Menu/HBoxContainer/VBoxContainer"]
-margin_top = 326.0
+margin_top = 246.0
 margin_right = 526.0
-margin_bottom = 390.0
+margin_bottom = 310.0
 mouse_default_cursor_shape = 2
 texture = ExtResource( 3 )
 __meta__ = {
@@ -100,13 +116,14 @@ align = 1
 valign = 1
 uppercase = true
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="NewGame" type="TextureRect" parent="Menu/HBoxContainer/VBoxContainer"]
-margin_top = 394.0
+margin_top = 314.0
 margin_right = 526.0
-margin_bottom = 458.0
+margin_bottom = 378.0
 mouse_default_cursor_shape = 2
 texture = ExtResource( 3 )
 __meta__ = {
@@ -125,13 +142,14 @@ align = 1
 valign = 1
 uppercase = true
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Credits" type="TextureRect" parent="Menu/HBoxContainer/VBoxContainer"]
-margin_top = 462.0
+margin_top = 382.0
 margin_right = 526.0
-margin_bottom = 526.0
+margin_bottom = 446.0
 mouse_default_cursor_shape = 2
 texture = ExtResource( 3 )
 __meta__ = {
@@ -150,13 +168,14 @@ align = 1
 valign = 1
 uppercase = true
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Quit" type="TextureRect" parent="Menu/HBoxContainer/VBoxContainer"]
-margin_top = 530.0
+margin_top = 450.0
 margin_right = 526.0
-margin_bottom = 594.0
+margin_bottom = 514.0
 mouse_default_cursor_shape = 2
 texture = ExtResource( 3 )
 __meta__ = {
@@ -180,10 +199,10 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="Menu/HBoxContainer"]
-margin_left = 1104.0
-margin_top = 460.0
-margin_right = 1104.0
-margin_bottom = 460.0
+margin_left = 984.0
+margin_top = 380.0
+margin_right = 984.0
+margin_bottom = 380.0
 size_flags_horizontal = 6
 size_flags_vertical = 4
 __meta__ = {
@@ -218,30 +237,17 @@ __meta__ = {
 [node name="AcceptDialog" type="AcceptDialog" parent="Menu"]
 margin_left = 120.0
 margin_top = 80.0
-margin_right = 540.0
-margin_bottom = 138.0
+margin_right = 1558.0
+margin_bottom = 840.0
+grow_horizontal = 2
+grow_vertical = 2
 popup_exclusive = true
 window_title = "Warning!"
 dialog_text = "Starting a new game will overwrite your current save. Continue?"
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="black-rect" type="ColorRect" parent="."]
-margin_left = -247.0
-margin_top = -207.0
-margin_right = 2215.0
-margin_bottom = 1301.0
-mouse_filter = 2
-color = Color( 0, 0, 0, 1 )
-script = ExtResource( 9 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Continue" to="." method="_on_Continue_gui_signal"]
+[connection signal="fade_complete" from="black-rect" to="." method="_on_blackrect_fade_complete"]
+[connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Continue" to="." method="Continue_gui_input"]
 [connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/NewGame" to="." method="NewGame_gui_input"]
 [connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Credits" to="." method="Credits_gui_input"]
 [connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Quit" to="." method="Quit_gui_input"]
 [connection signal="confirmed" from="Menu/AcceptDialog" to="." method="AcceptDialog_confirmed"]
-[connection signal="fade_complete" from="black-rect" to="." method="_on_blackrect_fade_complete"]

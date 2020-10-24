@@ -1,0 +1,180 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://res/MenuFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scripts/PauseMenu.gd" type="Script" id=2]
+[ext_resource path="res://assets/worm.png" type="Texture" id=5]
+
+[node name="Menu" type="MarginContainer"]
+pause_mode = 2
+margin_right = 920.0
+margin_bottom = 480.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 460, 240 )
+custom_constants/margin_right = 120
+custom_constants/margin_top = 80
+custom_constants/margin_left = 120
+custom_constants/margin_bottom = 80
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 120.0
+margin_top = 80.0
+margin_right = 800.0
+margin_bottom = 400.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+color = Color( 0.219608, 0.0509804, 0.243137, 0.898039 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 120.0
+margin_top = 80.0
+margin_right = 800.0
+margin_bottom = 400.0
+alignment = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 77.0
+margin_right = 603.0
+margin_bottom = 320.0
+alignment = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Resume" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+margin_top = 26.0
+margin_right = 526.0
+margin_bottom = 90.0
+mouse_default_cursor_shape = 2
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label-Resume" type="Label" parent="HBoxContainer/VBoxContainer/Resume"]
+margin_left = 9.0
+margin_top = 19.0
+margin_right = 517.0
+margin_bottom = 65.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.756863, 0.160784, 0.831373, 1 )
+text = "Resume"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Volume" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+margin_top = 94.0
+margin_right = 526.0
+margin_bottom = 158.0
+mouse_default_cursor_shape = 2
+texture = ExtResource( 5 )
+
+[node name="Label-Volume" type="Label" parent="HBoxContainer/VBoxContainer/Volume"]
+margin_left = 21.0
+margin_top = 19.0
+margin_right = 69.0
+margin_bottom = 63.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.756863, 0.160784, 0.831373, 1 )
+text = "Vol"
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slider-Volume" type="HSlider" parent="HBoxContainer/VBoxContainer/Volume"]
+margin_left = 64.0
+margin_top = 18.0
+margin_right = 483.0
+margin_bottom = 59.0
+min_value = -40.0
+max_value = 0.0
+scrollable = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mouse" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+margin_top = 162.0
+margin_right = 526.0
+margin_bottom = 226.0
+mouse_default_cursor_shape = 2
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label-Mouse" type="Label" parent="HBoxContainer/VBoxContainer/Mouse"]
+margin_left = 21.0
+margin_top = 19.0
+margin_right = 114.0
+margin_bottom = 63.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.756863, 0.160784, 0.831373, 1 )
+text = "Mouse"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slider-Mouse" type="HSlider" parent="HBoxContainer/VBoxContainer/Mouse"]
+margin_left = 110.0
+margin_top = 18.0
+margin_right = 483.0
+margin_bottom = 59.0
+min_value = 0.1
+max_value = 3.0
+step = 0.01
+value = 1.0
+scrollable = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+margin_top = 230.0
+margin_right = 526.0
+margin_bottom = 294.0
+mouse_default_cursor_shape = 2
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label-Menu" type="Label" parent="HBoxContainer/VBoxContainer/Menu"]
+margin_left = 9.0
+margin_top = 19.0
+margin_right = 519.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.756863, 0.160784, 0.831373, 1 )
+text = "Main menu"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="visibility_changed" from="." to="." method="Menu_visibility_changed"]
+[connection signal="gui_input" from="HBoxContainer/VBoxContainer/Resume" to="." method="Resume_gui_input"]
+[connection signal="value_changed" from="HBoxContainer/VBoxContainer/Volume/Slider-Volume" to="." method="SliderVolume_value_changed"]
+[connection signal="value_changed" from="HBoxContainer/VBoxContainer/Mouse/Slider-Mouse" to="." method="SliderMouse_value_changed"]
+[connection signal="gui_input" from="HBoxContainer/VBoxContainer/Menu" to="." method="Menu_gui_input"]

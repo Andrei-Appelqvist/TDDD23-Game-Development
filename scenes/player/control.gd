@@ -1,6 +1,5 @@
 extends RigidBody2D
 var desired_rotation = 0
-var rotation_mult = 1.0
 var frozen = false
 
 func _ready():
@@ -8,11 +7,7 @@ func _ready():
 
 func _input(event):
     if event is InputEventMouseMotion and frozen == false:
-        desired_rotation += event.relative.x * rotation_mult
-    elif event.is_action_pressed("ui_down"):
-        rotation_mult -= 0.1
-    elif event.is_action_pressed("ui_up"):
-        rotation_mult += 0.1
+        desired_rotation += event.relative.x * GlobalVariables.mouse
         
 
 func _integrate_forces(state):
