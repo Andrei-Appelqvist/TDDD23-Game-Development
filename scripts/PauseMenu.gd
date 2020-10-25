@@ -38,4 +38,4 @@ func Menu_gui_input(event):
         get_parent().get_node("black-rect").fade(1,0)
         yield(get_tree().create_timer(1.5), "timeout")
         get_tree().paused = false
-        get_tree().change_scene("res://scenes/färdiga_scener/Menu.tscn")
+        get_tree().change_scene("res://scenes/Menu.tscn")

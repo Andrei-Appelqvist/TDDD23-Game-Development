@@ -1,20 +1,26 @@
 [gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/audio/hawk.wav" type="AudioStream" id=1]
-[ext_resource path="res://scenes/AnimationPlayer.gd" type="Script" id=2]
-[ext_resource path="res://scenes/player/Tiles.tres" type="TileSet" id=3]
-[ext_resource path="res://scenes/TilemapTest.gd" type="Script" id=4]
+[ext_resource path="res://scripts/AnimationPlayer.gd" type="Script" id=2]
+[ext_resource path="res://res/Tiles.tres" type="TileSet" id=3]
+[ext_resource path="res://scripts/TilemapTest.gd" type="Script" id=4]
 [ext_resource path="res://assets/Mossy Tileset/buske1.png" type="Texture" id=5]
 [ext_resource path="res://assets/Mossy Tileset/BG.png" type="Texture" id=6]
 [ext_resource path="res://assets/Mossy Tileset/trunk.png" type="Texture" id=7]
 [ext_resource path="res://assets/Mossy Tileset/buske2.png" type="Texture" id=8]
 [ext_resource path="res://assets/Mossy Tileset/Skylt.png" type="Texture" id=9]
 [ext_resource path="res://assets/Mossy Tileset/Tree-big.png" type="Texture" id=10]
-[ext_resource path="res://res/Animal_02__ATTACK_001.png" type="Texture" id=11]
-[ext_resource path="res://scenes/Area2D.gd" type="Script" id=12]
+[ext_resource path="res://assets/ending/Animal_02__ATTACK_001.png" type="Texture" id=11]
+[ext_resource path="res://scripts/Area2D.gd" type="Script" id=12]
 [ext_resource path="res://res/EndFont.tres" type="DynamicFont" id=13]
-[ext_resource path="res://scenes/Label.gd" type="Script" id=14]
+[ext_resource path="res://scripts/Label.gd" type="Script" id=14]
 [ext_resource path="res://scripts/ColorRect.gd" type="Script" id=15]
+
+
+
+
+
+
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Area2D

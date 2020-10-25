@@ -20,7 +20,7 @@ func NewGame_gui_input(event):
         if save_exists:
             $Menu/AcceptDialog.show()
         else:
-            to_scene = "res://scenes/newgame_cutscene.tscn"
+            to_scene = "res://scenes/Intro.tscn"
             $"black-rect".fade(0.5,0)
    
 
@@ -32,14 +32,14 @@ func Quit_gui_input(event):
 func Credits_gui_input(event):
     if event.is_action_pressed("jump"):
         $"black-rect".fade(0.5,0)
-        to_scene = "res://scenes/credits_cutscene.tscn"
+        to_scene = "res://scenes/Credits.tscn"
 
 
 func AcceptDialog_confirmed():
     var save_dir = Directory.new()
     save_dir.remove("user://savegame.save")
     $"black-rect".fade(0.5, 0)
-    to_scene = "res://scenes/newgame_cutscene.tscn"
+    to_scene = "res://scenes/Intro.tscn"
 
 
 func _on_blackrect_fade_complete():
