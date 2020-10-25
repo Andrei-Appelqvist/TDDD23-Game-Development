@@ -10,8 +10,6 @@
 [ext_resource path="res://assets/worm/light.png" type="Texture" id=8]
 [ext_resource path="res://scripts/ColorRect.gd" type="Script" id=9]
 
-
-
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/Hand Drawn Shapes.ttf"
 

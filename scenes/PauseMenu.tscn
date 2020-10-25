@@ -24,9 +24,9 @@ __meta__ = {
 [node name="ColorRect" type="TextureRect" parent="."]
 light_mask = 0
 margin_left = 120.0
-margin_top = 45.0
+margin_top = 80.0
 margin_right = 800.0
-margin_bottom = 430.0
+margin_bottom = 400.0
 grow_horizontal = 0
 grow_vertical = 0
 mouse_filter = 2

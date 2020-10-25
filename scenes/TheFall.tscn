@@ -9,9 +9,10 @@
 [ext_resource path="res://res/Tiles2.tres" type="TileSet" id=7]
 [ext_resource path="res://assets/signs/piljavel.png" type="Texture" id=9]
 [ext_resource path="res://assets/signs/rotation-pil.png" type="Texture" id=11]
-[ext_resource path="res://assets/worm/rak2.png" type="Texture" id=12]
-[ext_resource path="res://assets/worm/bent.png" type="Texture" id=13]
+[ext_resource path="res://assets/signs/rak2.png" type="Texture" id=12]
+[ext_resource path="res://assets/signs/bent.png" type="Texture" id=13]
 [ext_resource path="res://assets/signs/mouse-noo-click.png" type="Texture" id=14]
+
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 3

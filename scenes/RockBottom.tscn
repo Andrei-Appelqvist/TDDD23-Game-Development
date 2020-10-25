@@ -5,7 +5,7 @@
 [ext_resource path="res://res/Tiles2.tres" type="TileSet" id=5]
 [ext_resource path="res://assets/Backgrounds/rock hell mesh.png" type="Texture" id=6]
 [ext_resource path="res://assets/Assets 1024 Cave/Square - Black.jpg" type="Texture" id=10]
-[ext_resource path="res://assets/welcome sign.png" type="Texture" id=11]
+[ext_resource path="res://assets/Assets 1024 Cave/welcome sign.png" type="Texture" id=11]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 3
