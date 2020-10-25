@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://res/MenuFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scripts/AcceptDialog.gd" type="Script" id=2]
@@ -9,16 +9,7 @@
 [ext_resource path="res://assets/Backgrounds/menu_bg.png" type="Texture" id=7]
 [ext_resource path="res://assets/worm/light.png" type="Texture" id=8]
 [ext_resource path="res://scripts/ColorRect.gd" type="Script" id=9]
-
-[sub_resource type="DynamicFontData" id=1]
-font_path = "res://assets/Hand Drawn Shapes.ttf"
-
-[sub_resource type="DynamicFont" id=2]
-size = 200
-outline_size = 4
-outline_color = Color( 0, 0, 0, 1 )
-extra_spacing_char = 4
-font_data = SubResource( 1 )
+[ext_resource path="res://res/HandDrawn.tres" type="DynamicFont" id=10]
 
 [node name="Background" type="TextureRect"]
 anchor_right = 0.389
@@ -36,7 +27,7 @@ margin_left = 1.0
 margin_top = 1.0
 margin_right = 1919.0
 margin_bottom = 331.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = ExtResource( 10 )
 custom_colors/font_color = Color( 0.756863, 0.160784, 0.831373, 1 )
 text = "NATURAL SELECTION"
 align = 1
