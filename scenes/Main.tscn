@@ -17,7 +17,7 @@ extents = Vector2( 501.812, 120.799 )
 pause_mode = 2
 script = ExtResource( 3 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
 pause_mode = 1
 margin_left = -5103.0
 margin_top = -3743.0
@@ -51,7 +51,7 @@ position = Vector2( 72.47, -530.846 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 pause_mode = 1
-position = Vector2( -1334.89, 125.314 )
+position = Vector2( -392.891, -1051.84 )
 
 [node name="Area2D" type="Area2D" parent="."]
 pause_mode = 1
