@@ -1,13 +1,29 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://res/MenuFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scripts/PauseMenu.gd" type="Script" id=2]
+[ext_resource path="res://assets/Backgrounds/pause-menu-bg.png" type="Texture" id=3]
 [ext_resource path="res://assets/worm.png" type="Texture" id=5]
 
-[node name="Menu" type="MarginContainer"]
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 193.272
+margin_top = 122.045
+margin_right = 2113.27
+margin_bottom = 833.045
+rect_scale = Vector2( 0.4, 0.55 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="MarginContainer" parent="."]
 pause_mode = 2
-margin_right = 920.0
-margin_bottom = 480.0
+margin_left = 120.0
+margin_top = 80.0
+margin_right = 1040.0
+margin_bottom = 560.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_pivot_offset = Vector2( 460, 240 )
@@ -17,10 +33,12 @@ custom_constants/margin_left = 120
 custom_constants/margin_bottom = 80
 script = ExtResource( 2 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="Menu"]
+visible = false
 margin_left = 120.0
 margin_top = 80.0
 margin_right = 800.0
@@ -33,7 +51,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu"]
 margin_left = 120.0
 margin_top = 80.0
 margin_right = 800.0
@@ -43,7 +61,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/HBoxContainer"]
 margin_left = 77.0
 margin_right = 603.0
 margin_bottom = 320.0
@@ -52,7 +70,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Resume" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+[node name="Resume" type="TextureRect" parent="Menu/HBoxContainer/VBoxContainer"]
 margin_top = 26.0
 margin_right = 526.0
 margin_bottom = 90.0
@@ -62,7 +80,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label-Resume" type="Label" parent="HBoxContainer/VBoxContainer/Resume"]
+[node name="Label-Resume" type="Label" parent="Menu/HBoxContainer/VBoxContainer/Resume"]
 margin_left = 9.0
 margin_top = 19.0
 margin_right = 517.0
@@ -74,17 +92,21 @@ align = 1
 valign = 1
 uppercase = true
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Volume" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+[node name="Volume" type="TextureRect" parent="Menu/HBoxContainer/VBoxContainer"]
 margin_top = 94.0
 margin_right = 526.0
 margin_bottom = 158.0
 mouse_default_cursor_shape = 2
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Label-Volume" type="Label" parent="HBoxContainer/VBoxContainer/Volume"]
+[node name="Label-Volume" type="Label" parent="Menu/HBoxContainer/VBoxContainer/Volume"]
 margin_left = 21.0
 margin_top = 19.0
 margin_right = 69.0
@@ -98,7 +120,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Slider-Volume" type="HSlider" parent="HBoxContainer/VBoxContainer/Volume"]
+[node name="Slider-Volume" type="HSlider" parent="Menu/HBoxContainer/VBoxContainer/Volume"]
 margin_left = 64.0
 margin_top = 18.0
 margin_right = 483.0
@@ -110,7 +132,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Mouse" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+[node name="Mouse" type="TextureRect" parent="Menu/HBoxContainer/VBoxContainer"]
 margin_top = 162.0
 margin_right = 526.0
 margin_bottom = 226.0
@@ -120,7 +142,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label-Mouse" type="Label" parent="HBoxContainer/VBoxContainer/Mouse"]
+[node name="Label-Mouse" type="Label" parent="Menu/HBoxContainer/VBoxContainer/Mouse"]
 margin_left = 21.0
 margin_top = 19.0
 margin_right = 114.0
@@ -135,7 +157,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Slider-Mouse" type="HSlider" parent="HBoxContainer/VBoxContainer/Mouse"]
+[node name="Slider-Mouse" type="HSlider" parent="Menu/HBoxContainer/VBoxContainer/Mouse"]
 margin_left = 110.0
 margin_top = 18.0
 margin_right = 483.0
@@ -149,7 +171,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Menu" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+[node name="Menu" type="TextureRect" parent="Menu/HBoxContainer/VBoxContainer"]
 margin_top = 230.0
 margin_right = 526.0
 margin_bottom = 294.0
@@ -159,7 +181,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Label-Menu" type="Label" parent="HBoxContainer/VBoxContainer/Menu"]
+[node name="Label-Menu" type="Label" parent="Menu/HBoxContainer/VBoxContainer/Menu"]
 margin_left = 9.0
 margin_top = 19.0
 margin_right = 519.0
@@ -173,8 +195,8 @@ uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="visibility_changed" from="." to="." method="Menu_visibility_changed"]
-[connection signal="gui_input" from="HBoxContainer/VBoxContainer/Resume" to="." method="Resume_gui_input"]
-[connection signal="value_changed" from="HBoxContainer/VBoxContainer/Volume/Slider-Volume" to="." method="SliderVolume_value_changed"]
-[connection signal="value_changed" from="HBoxContainer/VBoxContainer/Mouse/Slider-Mouse" to="." method="SliderMouse_value_changed"]
-[connection signal="gui_input" from="HBoxContainer/VBoxContainer/Menu" to="." method="Menu_gui_input"]
+[connection signal="visibility_changed" from="Menu" to="Menu" method="Menu_visibility_changed"]
+[connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Resume" to="Menu" method="Resume_gui_input"]
+[connection signal="value_changed" from="Menu/HBoxContainer/VBoxContainer/Volume/Slider-Volume" to="Menu" method="SliderVolume_value_changed"]
+[connection signal="value_changed" from="Menu/HBoxContainer/VBoxContainer/Mouse/Slider-Mouse" to="Menu" method="SliderMouse_value_changed"]
+[connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Menu" to="Menu" method="Menu_gui_input"]
