@@ -212,6 +212,7 @@ __meta__ = {
 }
 
 [node name="AcceptDialog" type="AcceptDialog" parent="Menu"]
+light_mask = 0
 margin_left = 120.0
 margin_top = 80.0
 margin_right = 1558.0
