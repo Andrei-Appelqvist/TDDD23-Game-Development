@@ -31,20 +31,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="black-rect" type="ColorRect" parent="."]
-self_modulate = Color( 1, 1, 1, 0.356863 )
-margin_left = -247.0
-margin_top = -207.0
-margin_right = 2215.0
-margin_bottom = 1301.0
-mouse_filter = 2
-color = Color( 0, 0, 0, 1 )
-script = ExtResource( 9 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
 [node name="Label-title" type="Label" parent="."]
 margin_left = 1.0
 margin_top = 1.0
@@ -245,9 +231,23 @@ popup_exclusive = true
 window_title = "Warning!"
 dialog_text = "Starting a new game will overwrite your current save. Continue?"
 script = ExtResource( 2 )
-[connection signal="fade_complete" from="black-rect" to="." method="_on_blackrect_fade_complete"]
+
+[node name="black-rect" type="ColorRect" parent="."]
+modulate = Color( 1, 1, 1, 0.376471 )
+margin_left = -247.0
+margin_top = -207.0
+margin_right = 2215.0
+margin_bottom = 1301.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
 [connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Continue" to="." method="Continue_gui_input"]
 [connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/NewGame" to="." method="NewGame_gui_input"]
 [connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Credits" to="." method="Credits_gui_input"]
 [connection signal="gui_input" from="Menu/HBoxContainer/VBoxContainer/Quit" to="." method="Quit_gui_input"]
 [connection signal="confirmed" from="Menu/AcceptDialog" to="." method="AcceptDialog_confirmed"]
+[connection signal="fade_complete" from="black-rect" to="." method="_on_blackrect_fade_complete"]

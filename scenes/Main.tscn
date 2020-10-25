@@ -72,10 +72,6 @@ shape = SubResource( 1 )
 
 [node name="Menu" parent="." instance=ExtResource( 8 )]
 visible = false
-margin_left = -1129.12
-margin_top = -608.146
-margin_right = -209.125
-margin_bottom = -128.146
 rect_scale = Vector2( 2, 2 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]

@@ -11,7 +11,7 @@ func _input(event):
 		desire_rotation = true
 	elif event.is_action_released("jump"):
 		desire_rotation = false
-		
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -27,5 +27,5 @@ func _integrate_forces(state):
 		angular_damp = 8
 
 func _on_seg_body_entered(body):
-	#$AudioStreamPlayer2D.play()
-	pass
+    $AudioStreamPlayer2D.play()
+    pass
