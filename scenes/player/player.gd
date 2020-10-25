@@ -6,9 +6,8 @@ var camera_done = false
 var current_song = 0
 
 var music_list = {0 : "res://assets/audio/plank-pose.ogg",
-    1 : "res://assets/audio/Brass-Laterns.ogg",
-    2 : "res://assets/audio/Skwun.ogg",
-    3 : "res://assets/audio/deepwoods.ogg"}
+    1 : "res://assets/audio/immersion.ogg",
+    2 : "res://assets/audio/deepwoods.ogg"}
 
 func set_start_speed(velocity):
     $control.apply_impulse(Vector2(),velocity)

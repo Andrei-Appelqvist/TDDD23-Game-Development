@@ -95,4 +95,4 @@ func _on_Area2D_body_entered(body):
 
 
 func _on_Area2D2_body_entered(body):
-    player.play_song(3)
+    player.play_song(2)
