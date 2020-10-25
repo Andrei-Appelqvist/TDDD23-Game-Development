@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/färdiga_scener/TheFall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://scenes/Bird_end.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/hell.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/PauseMenu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scripts/ColorRect.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 501.812, 120.799 )
@@ -50,7 +51,7 @@ position = Vector2( 72.47, -530.846 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 pause_mode = 1
-position = Vector2( 17214, 1365.26 )
+position = Vector2( 35119.5, -8135.26 )
 
 [node name="Area2D" type="Area2D" parent="."]
 pause_mode = 1
@@ -66,12 +67,24 @@ pause_mode = 1
 position = Vector2( 12251.7, 10571.7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2( 2596.37, -4281.66 )
-rotation = -2.11185
+position = Vector2( 3303.23, -6658.72 )
 shape = SubResource( 1 )
 
 [node name="Menu" parent="." instance=ExtResource( 8 )]
 visible = false
 rect_scale = Vector2( 2, 2 )
+
+[node name="black-rect" type="ColorRect" parent="."]
+modulate = Color( 1, 1, 1, 0.376471 )
+margin_left = -11840.0
+margin_top = -18094.0
+margin_right = 57932.0
+margin_bottom = 22652.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]

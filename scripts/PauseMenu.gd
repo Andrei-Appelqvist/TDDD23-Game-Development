@@ -35,5 +35,7 @@ func Resume_gui_input(event):
 
 func Menu_gui_input(event):
     if event.is_action_pressed("jump"):
+        get_parent().get_node("black-rect").fade(1,0)
+        yield(get_tree().create_timer(1.5), "timeout")
         get_tree().paused = false
         get_tree().change_scene("res://scenes/färdiga_scener/Menu.tscn")

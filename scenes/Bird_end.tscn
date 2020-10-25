@@ -245,10 +245,8 @@ __meta__ = {
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 pause_mode = 2
+position = Vector2( 15689.1, -3620.85 )
 stream = ExtResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="end-text" type="Label" parent="."]
 margin_left = 13049.0

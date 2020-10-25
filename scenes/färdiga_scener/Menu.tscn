@@ -221,12 +221,12 @@ __meta__ = {
 }
 
 [node name="AcceptDialog" type="AcceptDialog" parent="Menu"]
-margin_left = 120.0
-margin_top = 80.0
-margin_right = 1558.0
-margin_bottom = 840.0
-grow_horizontal = 2
-grow_vertical = 2
+margin_left = 760.0
+margin_top = 540.0
+margin_right = 1180.0
+margin_bottom = 598.0
+grow_horizontal = 0
+grow_vertical = 0
 popup_exclusive = true
 window_title = "Warning!"
 dialog_text = "Starting a new game will overwrite your current save. Continue?"
