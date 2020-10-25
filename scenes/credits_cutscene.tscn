@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://VideoPlayer.gd" type="Script" id=1]
-[ext_resource path="res://assets/cutscene/cutscene.ogv" type="VideoStream" id=2]
+[ext_resource path="res://assets/cutscene/credits.ogv" type="VideoStream" id=2]
 
 [node name="VideoPlayer" type="VideoPlayer"]
 anchor_right = 1.0
