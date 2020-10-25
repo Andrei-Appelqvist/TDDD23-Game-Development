@@ -228,10 +228,10 @@ __meta__ = {
 [node name="AcceptDialog" type="AcceptDialog" parent="."]
 visible = true
 light_mask = 0
-margin_left = 768.062
-margin_top = 516.312
-margin_right = 1188.06
-margin_bottom = 574.312
+margin_left = 824.996
+margin_top = 537.288
+margin_right = 1245.0
+margin_bottom = 595.288
 grow_horizontal = 0
 grow_vertical = 0
 popup_exclusive = true

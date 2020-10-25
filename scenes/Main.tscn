@@ -51,7 +51,7 @@ position = Vector2( 72.47, -530.846 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 pause_mode = 1
-position = Vector2( -392.891, -1051.84 )
+position = Vector2( -1216.38, -228.78 )
 
 [node name="Area2D" type="Area2D" parent="."]
 pause_mode = 1
